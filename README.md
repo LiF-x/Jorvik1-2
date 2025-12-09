@@ -1,6 +1,6 @@
-# JorvikMod
+# JorvikMod 1-2
 
-JorvikMod Made compatible with LiFx Framework and Yolauncher
+This is a JorvikMod 1 & 2.1 ModPack Made compatible with LiFx Framework and Yolauncher
 Creator: Odin one Eye
 Modified by: Ibun & Mjoed
 
