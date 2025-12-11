@@ -9,22 +9,23 @@
 
 if (!isObject(JorvikMod2))
 {
-    new ScriptObject(JorvikMod2)
-    {
-    };
+    new ScriptObject(JorvikMod2) {};
 }
 
 package JorvikMod2
 {
     function JorvikMod2::setup()
     {
-        echo("JorvikMod2 setup called!"); // Debug to ensure setup runs
+        echo("JorvikMod2 setup called!");
 
         LiFx::registerCallback($LiFx::hooks::onMaterialsLoad, RegisterMaterials, JorvikMod2);
         LiFx::registerCallback($LiFx::hooks::onInitialized, onInitialized, JorvikMod2);
+
+        // Copy heraldry once the GUI and assets are initialized
+        LiFx::registerCallback($LiFx::hooks::onInitialized, copyAllHeraldry, JorvikMod2);
+
         LiFx::registerCallback($LiFx::hooks::onDatablockLoad, RegisterDatablock, JorvikMod2);
 
-        // Initialize rules buffer safely
         $JorvikMod2::RulesBuffer = "";
     }
 
@@ -46,14 +47,81 @@ package JorvikMod2
         LiFx::loadRecursivelyInFolder("yolauncher/modpack/mods/Jorvik2/art/datablocks", "audioProfiles.cs");
     }
 
+    //--------------------------------------------------------------------------
+    //  RECURSIVE COPY FUNCTION
+    //--------------------------------------------------------------------------
+
+    function JorvikMod2::copyHeraldryRecursively(%this, %source, %dest)
+    {
+        echo("Copying PNGs: " @ %source @ " -> " @ %dest);
+
+        // Ensure destination exists
+        if (!isDirectory(%dest))
+            createPath(%dest);
+
+        // Copy PNG files in this folder
+        %pattern = %source @ "/*.png";
+        %file = findFirstFile(%pattern);
+
+        while (%file !$= "")
+        {
+            %name   = fileName(%file);
+            %target = %dest @ "/" @ %name;
+
+            echo(" - Copying: " @ %file @ " -> " @ %target);
+
+            fileCopy(%file, %target, true); // overwrite = true
+
+            %file = findNextFile(%pattern);
+        }
+
+        // Process subfolders
+        %subPattern = %source @ "/*";
+        %sub = findFirstFile(%subPattern);
+
+        while (%sub !$= "")
+        {
+            if (isDirectory(%sub))
+            {
+                %folderName = fileName(%sub);
+
+                if (%folderName !$= "" && %folderName !$= "." && %folderName !$= "..")
+                {
+                    %newSrc = %sub;
+                    %newDst = %dest @ "/" @ %folderName;
+
+                    %this.copyHeraldryRecursively(%newSrc, %newDst);
+                }
+            }
+
+            %sub = findNextFile(%subPattern);
+        }
+    }
+
+    //--------------------------------------------------------------------------
+    //  CALLBACK WRAPPER TO START COPYING
+    //--------------------------------------------------------------------------
+
+    function JorvikMod2::copyAllHeraldry(%this)
+    {
+        %src = "yolauncher/modpack/mods/Jorvik2/art/Textures/Heraldry";
+        %dst = expandFilename("./art/Textures/Heraldry");
+
+        echo("Starting Heraldry COPY...");
+        %this.copyHeraldryRecursively(%src, %dst);
+        echo("Heraldry COPY Complete.");
+    }
+
+    //--------------------------------------------------------------------------
+    //  GUI INITIALIZATION
+    //--------------------------------------------------------------------------
+
     function JorvikMod2::onInitialized()
     {
         if (isObject(MainMenuGui))
             MainMenuGui.delete();
-
         if (isObject(SettingsMenuGui))
             SettingsMenuGui.delete();
-
         if (isObject(selectCharacterDlg))
             selectCharacterDlg.delete();
 
@@ -63,11 +131,10 @@ package JorvikMod2
         LiFx::loadRecursivelyInFolder("yolauncher/modpack/mods/Jorvik2/art/gui/forms", "LiFxloadingGui.gui");
     }
 
-    // ---------------------------------------------------------------------
-    //  CLIENT-SIDE RULE DISPLAY HANDLERS
-    // ---------------------------------------------------------------------
+    //--------------------------------------------------------------------------
+    //  RULES SYSTEM
+    //--------------------------------------------------------------------------
 
-    // Buffer to collect all rule text chunks
     function clientCmdDisplayRules(%chunk)
     {
         if (!isDefined("$JorvikMod2::RulesBuffer"))
@@ -76,7 +143,6 @@ package JorvikMod2
         $JorvikMod2::RulesBuffer = $JorvikMod2::RulesBuffer @ %chunk;
     }
 
-    // When server signals completion, show the rules
     function clientCmdEndRulesTransmission()
     {
         if ($JorvikMod2::RulesBuffer $= "")
@@ -85,21 +151,17 @@ package JorvikMod2
             return;
         }
 
-        echo("Rules received:\n" @ $JorvikMod2::RulesBuffer); // Debug
+        echo("Rules received:\n" @ $JorvikMod2::RulesBuffer);
         messageBoxOK("Server Rules", $JorvikMod2::RulesBuffer);
 
-        // Clear buffer for next use
         $JorvikMod2::RulesBuffer = "";
     }
 
-    // ---------------------------------------------------------------------
-    //  CLIENT FUNCTION TO REQUEST RULES FROM SERVER (for GUI button)
-    // ---------------------------------------------------------------------
     function displayRules(%request)
     {
         if (%request)
         {
-            echo("Requesting rules from server..."); // Debug
+            echo("Requesting rules from server...");
             commandToServer('RequestRules');
         }
     }

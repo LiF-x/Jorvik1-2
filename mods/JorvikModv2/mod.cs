@@ -219,7 +219,13 @@ package JorvikMod2
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, CopperSheet, JorvikMod2);
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, SilverBlanks, JorvikMod2);
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, CopperBlanks, JorvikMod2);
+    LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, HereldryFix, JorvikMod2);
 
+  }
+  function JorvikMod2::HereldryFix() {
+  dbi.Update(LiFxAntiCamper, "ALTER TABLE `heraldic_charges` COLLATE='utf8mb3_unicode_ci', CONVERT TO CHARSET utf8mb3 COLLATE 'utf8mb3_unicode_ci';");
+
+        LiFx::runSql($sql);
   }
 
   function JorvikMod2::objectsConversions(%this, %client) {
