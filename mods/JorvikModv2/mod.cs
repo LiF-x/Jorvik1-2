@@ -18,34 +18,17 @@ if (!isObject(JorvikMod2))
 // LiFx expect each mod to be it's own unique package
 package JorvikMod2
 {
-  // Returns a string as a version, LiFx will look for this specific function to output version to new connecting players
-  // Takes no parameters, is a reserved function for LiFx compatability.
   function JorvikMod2::version() {
     return "v2.1.0";
   }
 
-  // The setup method is required, and will be looked for by the framework, if it doesn't have it your mod will not execute
-  // This is where you tell the framework, which hooks you use and what object types you have added, so that the framework can call your code at the appropiate time
   function JorvikMod2::setup() {
     JorvikMod2.modRoot = getSubStr($Con::File,0,strrchrpos($Con::File,"/") + 1);
-    // Register callback hooks, do not run any form of code that does anything here, just register the hook
-	/**
-	* LiFx::registerCallback is a global framework function, it takes 3 parameters
-    * Parameter 1: The hook to register your function on
-    * Parameter 2: Non scoped name of function in your package
-    * Parameter 3: The package name to scope your function appropiately.
-	*/
+
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, objectsConversions, JorvikMod2);
     LiFx::registerCallback($LiFx::hooks::preServerCreatedCallbacks, loadDatablocks, JorvikMod2);
-	/**
-	* LiFx::registerObjectsTypes is a global framework function, it takes 2 parameters
-	* It is used to write to the dump.sql on start, prior to the server reading it, and is necessary as bitbox wipes the objectstypes table on each start up.
-    * Parameter 1: The function including scope to your objectstypes definition
-    * Parameter 2: The package name of your mod
-	*/
-
     // Buildings
-      LiFx::registerObjectsTypes(JorvikMod2::ObjectsTypesFlagPvP(), JorvikMod2);
+    LiFx::registerObjectsTypes(JorvikMod2::ObjectsTypesFlagPvP(), JorvikMod2);
     LiFx::registerObjectsTypes(JorvikMod2::ObjectsTypesFlagPvE(), JorvikMod2);
     LiFx::registerObjectsTypes(JorvikMod2::ObjectsTypesLonghouse(), JorvikMod2);
     LiFx::registerObjectsTypes(JorvikMod2::ObjectsTypesStoneGate(), JorvikMod2);
@@ -4441,6 +4424,4 @@ package JorvikMod2
       commandToClient(%client, 'EndRulesTransmission');
   }
 };
-// This command is from Torque, and activates your package so that the engine can reference it
-// This is required for your mod to work, and have the code loaded in torque engine.
 activatePackage(JorvikMod2);
