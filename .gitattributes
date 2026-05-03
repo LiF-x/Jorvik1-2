@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# LiF data files are CRLF on the live server. Don't let git normalize them
+# on commit/checkout — the Edge installer diffs the mod-side data/*.xml
+# against the per-server baseline (CRLF), so any line-ending drift turns
+# every line into a changed hunk and breaks 3-way merging across mods.
+data/**/*.xml -text
+transforms/**/*.xml -text
