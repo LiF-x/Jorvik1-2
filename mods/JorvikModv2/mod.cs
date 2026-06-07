@@ -166,7 +166,7 @@ package JorvikMod2
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, SmallCandle, JorvikMod2);
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, AurochsCowstand, JorvikMod2);
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, AurochsCoweat, JorvikMod2);
-    LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, AurochsCowsleep, JorvikMod2);
+    LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, Aurochssleep, JorvikMod2);
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, Sowstand, JorvikMod2);
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, Soweat, JorvikMod2);
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, Sowsleep, JorvikMod2);
@@ -190,9 +190,12 @@ package JorvikMod2
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, IdolCross, JorvikMod2);
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, WoodenChurch, JorvikMod2);
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, SanctumoftheSleeper, JorvikMod2);
-    LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, NoviceDecoratorKit, JorvikMod2);
-    LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, ApprenticeDecoratorKit, JorvikMod2);
-    LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, MasterDecoratorKit, JorvikMod2);
+    LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, NoviceDecoratorsKit, JorvikMod2);
+    LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, ApprenticeDecoratorsKit, JorvikMod2);
+    LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, MasterDecoratorsKit, JorvikMod2);
+    LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, CopperCoins, JorvikMod2);
+    LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, SilverCoins, JorvikMod2);
+    LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, GoldCoins, JorvikMod2);
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, Wolfstand, JorvikMod2);
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, GoldSheet, JorvikMod2);
     LiFx::registerCallback($LiFx::hooks::onInitServerDBChangesCallbacks, MetalScissors, JorvikMod2);
@@ -206,9 +209,7 @@ package JorvikMod2
 
   }
   function JorvikMod2::HereldryFix() {
-  dbi.Update(LiFxAntiCamper, "ALTER TABLE `heraldic_charges` COLLATE='utf8mb3_unicode_ci', CONVERT TO CHARSET utf8mb3 COLLATE 'utf8mb3_unicode_ci';");
-
-        LiFx::runSql($sql);
+    dbi.Update("ALTER TABLE `heraldic_charges` COLLATE='utf8mb3_unicode_ci', CONVERT TO CHARSET utf8mb3 COLLATE 'utf8mb3_unicode_ci';");
   }
 
   function JorvikMod2::objectsConversions(%this, %client) {
@@ -254,7 +255,7 @@ package JorvikMod2
   }
   function JorvikMod2::FlagPvP() {
                                    //dbi.update("INSERT IGNORE INTO `recipe` VALUES (NULL,      Name,                 Description,      StartingToolsID,   SkillTypeID, SkillLvl, ResultObjectTypeID, SkillDepends,       Quantity, Autorepeat, isBluePrint, ImagePath)
-    dbi.Select(JorvikMod2, "FlagPvPRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Flag PvP', 'Object from Jorvik MOD',        32,               19,          100,        2452,               20,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/flag_pvp.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "FlagPvPRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Flag PvP', 'Object from Jorvik MOD',        32,               19,          100,        2452,               20,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/flag_pvp.png') RETURNING ID");
   }
   function JorvikMod2::FlagPvPRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -301,7 +302,7 @@ package JorvikMod2
   }
   function JorvikMod2::FlagPvE() {
                                    //dbi.update("INSERT IGNORE INTO `recipe` VALUES (NULL,      Name,                 Description,      StartingToolsID,   SkillTypeID, SkillLvl, ResultObjectTypeID, SkillDepends,       Quantity, Autorepeat, isBluePrint, ImagePath)
-    dbi.Select(JorvikMod2, "FlagPvERequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Flag PvE', 'Object from Jorvik MOD',        32,               19,          100,        2453,               20,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/flag_pvp.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "FlagPvERequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Flag PvE', 'Object from Jorvik MOD',        32,               19,          100,        2453,               20,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/flag_pvp.png') RETURNING ID");
   }
   function JorvikMod2::FlagPvERequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -348,7 +349,7 @@ package JorvikMod2
   }
   function JorvikMod2::Longhouse() {
                                    //dbi.update("INSERT IGNORE INTO `recipe` VALUES (NULL,      Name,                 Description,      StartingToolsID,   SkillTypeID, SkillLvl, ResultObjectTypeID, SkillDepends,       Quantity, Autorepeat, isBluePrint, ImagePath)
-    dbi.Select(JorvikMod2, "LonghouseRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Longhouse', 'Object from Jorvik MOD',        32,               20,          60,        2543,               20,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/long_house.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "LonghouseRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Longhouse', 'Object from Jorvik MOD',        32,               20,          60,        2543,               20,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/long_house.png') RETURNING ID");
   }
   function JorvikMod2::LonghouseRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -397,7 +398,7 @@ package JorvikMod2
   }
   function JorvikMod2::StoneGate() {
                                    //dbi.update("INSERT IGNORE INTO `recipe` VALUES (NULL,      Name,                 Description,      StartingToolsID,   SkillTypeID, SkillLvl, ResultObjectTypeID, SkillDepends,       Quantity, Autorepeat, isBluePrint, ImagePath)
-    dbi.Select(JorvikMod2, "StoneGateRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Stone Gate', 'Object from Jorvik MOD',        32,               19,          60,        2554,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/stone_gate.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "StoneGateRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Stone Gate', 'Object from Jorvik MOD',        32,               19,          60,        2554,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/stone_gate.png') RETURNING ID");
   }
   function JorvikMod2::StoneGateRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -445,7 +446,7 @@ package JorvikMod2
   }
   function JorvikMod2::SmallWoodenBridge() {
                                    //dbi.update("INSERT IGNORE INTO `recipe` VALUES (NULL,      Name,                 Description,      StartingToolsID,   SkillTypeID, SkillLvl, ResultObjectTypeID, SkillDepends,                  Quantity,Autorepeat,isBluePrint,           ImagePath)
-    dbi.Select(JorvikMod2, "SmallWoodenBridgeRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Bridge', 'Object from Jorvik MOD',        32,               18,          60,        2455,               10,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_bridge.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallWoodenBridgeRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Bridge', 'Object from Jorvik MOD',        32,               18,          60,        2455,               10,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_bridge.png') RETURNING ID");
   }
   function JorvikMod2::SmallWoodenBridgeRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -494,7 +495,7 @@ package JorvikMod2
   }
   function JorvikMod2::SmallStoneBridge() {
                                    //dbi.update("INSERT IGNORE INTO `recipe` VALUES (NULL,      Name,                 Description,      StartingToolsID,   SkillTypeID, SkillLvl, ResultObjectTypeID, SkillDepends,                  Quantity,Autorepeat,isBluePrint,           ImagePath)
-    dbi.Select(JorvikMod2, "SmallStoneBridgeRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Stone Gate', 'Object from Jorvik MOD',        32,               18,          60,        2456,               35,                       0,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_bridge.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallStoneBridgeRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Stone Gate', 'Object from Jorvik MOD',        32,               18,          60,        2456,               35,                       0,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_bridge.png') RETURNING ID");
   }
   function JorvikMod2::SmallStoneBridgeRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -1842,7 +1843,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/wall_torch.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/wall_torch.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -1874,7 +1875,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/wall_torch.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/wall_torch.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -1906,7 +1907,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_candle.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_candle.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -1938,7 +1939,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_candle.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_candle.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -1970,7 +1971,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/aurochs_cow.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/aurochs_cow.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2002,7 +2003,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/aurochs_cow.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/aurochs_cow.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2034,7 +2035,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/aurochs_cow.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/aurochs_cow.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2066,7 +2067,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/sow.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/sow.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2098,7 +2099,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/sow.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/sow.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2130,7 +2131,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/sow.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/sow.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2162,7 +2163,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/horse.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/horse.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2194,7 +2195,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/horse.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/horse.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2226,7 +2227,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/horse.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/horse.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2258,7 +2259,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/slave.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/slave.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2290,7 +2291,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/wranen_the_hunter.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/wranen_the_hunter.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 1; 
       OwnerTimeout = 0; 
@@ -2322,7 +2323,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Items/paper.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/items/paper.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 100; 
       OwnerTimeout = NULL; 
@@ -2354,7 +2355,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Items/health_book.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/items/health_book.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 9000; 
       OwnerTimeout = NULL; 
@@ -2482,7 +2483,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/aurochs_bull.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/aurochs_bull.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2514,7 +2515,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/aurochs_bull.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/aurochs_bull.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2546,7 +2547,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/aurochs_bull.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/aurochs_bull.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2578,7 +2579,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_pier.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_pier.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2610,7 +2611,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_pier_T.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_pier_T.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2642,7 +2643,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_pier_L.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_pier_L.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2674,7 +2675,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/wattle_wicket.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/wattle_wicket.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 3100; 
       OwnerTimeout = 86400; 
@@ -2706,7 +2707,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/idol_cross.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/idol_cross.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 1; 
       OwnerTimeout = NULL; 
@@ -2738,7 +2739,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/wooden_church.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/wooden_church.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 2400; 
       OwnerTimeout = 120; 
@@ -2770,7 +2771,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/church.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/church.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 2400; 
       OwnerTimeout = 120; 
@@ -2802,7 +2803,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Items/decoration_kit_small.png";
+      FaceImage = "art/2D/Items/decoration_kit_small.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 100; 
       OwnerTimeout = NULL; 
@@ -2834,7 +2835,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Items/decoration_kit_medium.png";
+      FaceImage = "art/2D/Items/decoration_kit_medium.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 100; 
       OwnerTimeout = NULL; 
@@ -2866,7 +2867,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Items/decoration_kit_large.png";
+      FaceImage = "art/2D/Items/decoration_kit_large.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 100; 
       OwnerTimeout = NULL; 
@@ -2898,7 +2899,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/wolf.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/recipes/wolf.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 0; 
       OwnerTimeout = 0; 
@@ -2930,7 +2931,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Items/gold_sheet.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/items/gold_sheet.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 9000; 
       OwnerTimeout = NULL; 
@@ -2962,7 +2963,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Items/scissors.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/items/scissors.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 9000; 
       OwnerTimeout = NULL; 
@@ -2994,7 +2995,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Items/metal_stamp.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/items/metal_stamp.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 9000; 
       OwnerTimeout = NULL; 
@@ -3026,7 +3027,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Items/gold_blanks.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/items/gold_blanks.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 9000; 
       OwnerTimeout = NULL; 
@@ -3058,7 +3059,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Items/silver_sheet.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/items/silver_sheet.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 9000; 
       OwnerTimeout = NULL; 
@@ -3090,7 +3091,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Items/copper_sheet.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/items/copper_sheet.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 9000; 
       OwnerTimeout = NULL; 
@@ -3122,7 +3123,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Items/silver_blanks.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/items/silver_blanks.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 9000; 
       OwnerTimeout = NULL; 
@@ -3154,7 +3155,7 @@ package JorvikMod2
       WorkAreaHeight = 0;
       BtnCloseTop = 0;
       BtnCloseLeft = 0;
-      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/Items/silver_blanks.png";
+      FaceImage = "yolauncher/modpack/mods/Jorvik2/art/2D/items/silver_blanks.png";
       Description = "Object from Jorvik MOD"; 
       BasePrice = 9000; 
       OwnerTimeout = NULL; 
@@ -3163,7 +3164,7 @@ package JorvikMod2
    };
   }
   function JorvikMod2::LargeWoodenBridge() {
-    dbi.Select(JorvikMod2, "LargeWoodenBridgeRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Large Wooden Bridge', 'Object from Jorvik MOD',        32,               18,          60,        2457,               10,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/large_wooden_bridge.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "LargeWoodenBridgeRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Large Wooden Bridge', 'Object from Jorvik MOD',        32,               18,          60,        2457,               10,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/large_wooden_bridge.png') RETURNING ID");
   }
   function JorvikMod2::LargeWoodenBridgeRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3178,7 +3179,7 @@ package JorvikMod2
     dbi.remove(%resultSet);
     %resultSet.delete();
   }  function JorvikMod2::LargeStoneBridge() {
-    dbi.Select(JorvikMod2, "LargeStoneBridgeRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Large Stone Bridge', 'Object from Jorvik MOD',        32,               19,          60,        2458,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/large_stone_bridge.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "LargeStoneBridgeRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Large Stone Bridge', 'Object from Jorvik MOD',        32,               19,          60,        2458,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/large_stone_bridge.png') RETURNING ID");
   }
   function JorvikMod2::LargeStoneBridgeRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3190,7 +3191,7 @@ package JorvikMod2
     dbi.remove(%resultSet);
     %resultSet.delete();
   }  function JorvikMod2::LargeStoneBridgeEnd() {
-    dbi.Select(JorvikMod2, "LargeStoneBridgeEndRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Large Stone Bridge End', 'Object from Jorvik MOD',        32,               19,          60,        2459,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/large_stone_bridge_end.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "LargeStoneBridgeEndRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Large Stone Bridge End', 'Object from Jorvik MOD',        32,               19,          60,        2459,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/large_stone_bridge_end.png') RETURNING ID");
   }
   function JorvikMod2::LargeStoneBridgeEndRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3202,7 +3203,7 @@ package JorvikMod2
     dbi.remove(%resultSet);
     %resultSet.delete();
   }  function JorvikMod2::SmallStoneBridgeEnd() {
-    dbi.Select(JorvikMod2, "SmallStoneBridgeEndRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Stone Bridge End', 'Object from Jorvik MOD',        32,               19,          60,        2460,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_stone_bridge_end.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallStoneBridgeEndRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Stone Bridge End', 'Object from Jorvik MOD',        32,               19,          60,        2460,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_stone_bridge_end.png') RETURNING ID");
   }
   function JorvikMod2::SmallStoneBridgeEndRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3215,7 +3216,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SmallLogWall() {
-    dbi.Select(JorvikMod2, "SmallLogWallRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall', 'Object from Jorvik MOD',        32,               18,          30,        2561,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_log_wall.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallLogWallRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall', 'Object from Jorvik MOD',        32,               18,          30,        2561,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_log_wall.png') RETURNING ID");
   }
   function JorvikMod2::SmallLogWallRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3228,7 +3229,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SmallWoodenPillar() {
-    dbi.Select(JorvikMod2, "SmallWoodenPillarRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Pillar', 'Object from Jorvik MOD',        32,               18,          30,        2562,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_pillar.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallWoodenPillarRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Pillar', 'Object from Jorvik MOD',        32,               18,          30,        2562,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_pillar.png') RETURNING ID");
   }
   function JorvikMod2::SmallWoodenPillarRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3241,7 +3242,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SmallLogCornerWall() {
-    dbi.Select(JorvikMod2, "SmallLogCornerWallRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Corner Wall', 'Object from Jorvik MOD',        32,               18,          30,        2563,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_log_corner_wall.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallLogCornerWallRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Corner Wall', 'Object from Jorvik MOD',        32,               18,          30,        2563,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_log_corner_wall.png') RETURNING ID");
   }
   function JorvikMod2::SmallLogCornerWallRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3255,7 +3256,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SmallLogWallWithWindow() {
-    dbi.Select(JorvikMod2, "SmallLogWallWithWindowRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall With Window', 'Object from Jorvik MOD',        32,               18,          30,        2564,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_log_wall_with_window.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallLogWallWithWindowRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall With Window', 'Object from Jorvik MOD',        32,               18,          30,        2564,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_log_wall_with_window.png') RETURNING ID");
   }
   function JorvikMod2::SmallLogWallWithWindowRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3270,7 +3271,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SmallLogWallWithShutters() {
-    dbi.Select(JorvikMod2, "SmallLogWallWithShuttersRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall With Shutters', 'Object from Jorvik MOD',        32,               18,          30,        2565,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_log_wall_with_shutters.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallLogWallWithShuttersRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall With Shutters', 'Object from Jorvik MOD',        32,               18,          30,        2565,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_log_wall_with_shutters.png') RETURNING ID");
   }
   function JorvikMod2::SmallLogWallWithShuttersRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3286,7 +3287,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SmallLogWallWithEntrance() {
-    dbi.Select(JorvikMod2, "SmallLogWallWithEntranceRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall With Entrance', 'Object from Jorvik MOD',        32,               18,          30,        2566,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_log_wall_with_entrance.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallLogWallWithEntranceRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall With Entrance', 'Object from Jorvik MOD',        32,               18,          30,        2566,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_log_wall_with_entrance.png') RETURNING ID");
   }
   function JorvikMod2::SmallLogWallWithEntranceRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3301,7 +3302,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SmallLogWallWithDoor() {
-    dbi.Select(JorvikMod2, "SmallLogWallWithDoorRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall With Door', 'Object from Jorvik MOD',        32,               18,          30,        2567,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_log_wall_with_door.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallLogWallWithDoorRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall With Door', 'Object from Jorvik MOD',        32,               18,          30,        2567,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_log_wall_with_door.png') RETURNING ID");
   }
   function JorvikMod2::SmallLogWallWithDoorRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3317,7 +3318,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SmallWoodenFloorEntrance() {
-    dbi.Select(JorvikMod2, "SmallWoodenFloorEntranceRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Floor Entrance', 'Object from Jorvik MOD',        32,               18,          30,        2568,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_floor_entrance.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallWoodenFloorEntranceRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Floor Entrance', 'Object from Jorvik MOD',        32,               18,          30,        2568,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_floor_entrance.png') RETURNING ID");
   }
   function JorvikMod2::SmallWoodenFloorEntranceRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3330,7 +3331,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SmallWoodenFloor() {
-    dbi.Select(JorvikMod2, "SmallWoodenFloorRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Floor', 'Object from Jorvik MOD',        32,               18,          30,        2569,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_floor.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallWoodenFloorRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Floor', 'Object from Jorvik MOD',        32,               18,          30,        2569,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_floor.png') RETURNING ID");
   }
   function JorvikMod2::SmallWoodenFloorRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3343,7 +3344,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SmallLogWallSlopeRight() {
-    dbi.Select(JorvikMod2, "SmallLogWallSlopeRightRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall Slope Right', 'Object from Jorvik MOD',        32,               18,          30,        2474,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_log_wall_slope_right.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallLogWallSlopeRightRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall Slope Right', 'Object from Jorvik MOD',        32,               18,          30,        2474,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_log_wall_slope_right.png') RETURNING ID");
   }
   function JorvikMod2::SmallLogWallSlopeRightRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3357,7 +3358,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SmallLogWallSlopeLeft() {
-    dbi.Select(JorvikMod2, "SmallLogWallSlopeLeftRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall Slope Left', 'Object from Jorvik MOD',        32,               18,          30,        2475,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_log_wall_slope_left.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallLogWallSlopeLeftRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall Slope Left', 'Object from Jorvik MOD',        32,               18,          30,        2475,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_log_wall_slope_left.png') RETURNING ID");
   }
   function JorvikMod2::SmallLogWallSlopeLeftRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3371,7 +3372,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SmallThatchRoof() {
-    dbi.Select(JorvikMod2, "SmallThatchRoofRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoof', 'Object from Jorvik MOD',        32,               18,          30,        2476,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_thatch_roof.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallThatchRoofRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoof', 'Object from Jorvik MOD',        32,               18,          30,        2476,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_thatch_roof.png') RETURNING ID");
   }
   function JorvikMod2::SmallThatchRoofRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3386,7 +3387,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SmallThatchRoofRightEnd() {
-    dbi.Select(JorvikMod2, "SmallThatchRoofRightEndRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofRightEnd', 'Object from Jorvik MOD',        32,               18,          30,        2477,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_thatch_roof_right_end.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallThatchRoofRightEndRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofRightEnd', 'Object from Jorvik MOD',        32,               18,          30,        2477,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_thatch_roof_right_end.png') RETURNING ID");
   }
   function JorvikMod2::SmallThatchRoofRightEndRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3401,7 +3402,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SmallThatchRoofLeftEnd() {
-    dbi.Select(JorvikMod2, "SmallThatchRoofLeftEndRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofLeftEnd', 'Object from Jorvik MOD',        32,               18,          30,        2478,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_thatch_roof_left_end.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallThatchRoofLeftEndRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofLeftEnd', 'Object from Jorvik MOD',        32,               18,          30,        2478,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_thatch_roof_left_end.png') RETURNING ID");
   }
   function JorvikMod2::SmallThatchRoofLeftEndRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3416,7 +3417,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SmallThatchRoofOuterCorner() {
-    dbi.Select(JorvikMod2, "SmallThatchRoofOuterCornerRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofOuterCorner', 'Object from Jorvik MOD',        32,               18,          30,        2479,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_thatch_roof_outer_corner.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallThatchRoofOuterCornerRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofOuterCorner', 'Object from Jorvik MOD',        32,               18,          30,        2479,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_thatch_roof_outer_corner.png') RETURNING ID");
   }
   function JorvikMod2::SmallThatchRoofOuterCornerRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3430,7 +3431,7 @@ package JorvikMod2
     dbi.remove(%resultSet);
     %resultSet.delete();
   }  function JorvikMod2::SmallLogWalllvl1() {
-    dbi.Select(JorvikMod2, "SmallLogWalllvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall', 'Object from Jorvik MOD',        32,               18,          30,        2481,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_log_wall_lvl1.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallLogWalllvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall', 'Object from Jorvik MOD',        32,               18,          30,        2481,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_log_wall_lvl1.png') RETURNING ID");
   }
   function JorvikMod2::SmallLogWalllvl1Requirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3443,7 +3444,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SmallWoodenPillarlvl1() {
-    dbi.Select(JorvikMod2, "SmallWoodenPillarlvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Pillar', 'Object from Jorvik MOD',        32,               18,          30,        2482,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_pillar_lvl1.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallWoodenPillarlvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Pillar', 'Object from Jorvik MOD',        32,               18,          30,        2482,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_pillar_lvl1.png') RETURNING ID");
   }
   function JorvikMod2::SmallWoodenPillarlvl1Requirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3456,7 +3457,7 @@ package JorvikMod2
     %resultSet.delete();
   }	  
   function JorvikMod2::SmallLogCornerWalllvl1() {
-    dbi.Select(JorvikMod2, "SmallLogCornerWallRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Corner Wall', 'Object from Jorvik MOD',        32,               18,          30,        2483,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_log_corner_wall_lvl1.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallLogCornerWallRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Corner Wall', 'Object from Jorvik MOD',        32,               18,          30,        2483,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_log_corner_wall_lvl1.png') RETURNING ID");
   }
   function JorvikMod2::SmallLogCornerWalllvl1Requirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3470,7 +3471,7 @@ package JorvikMod2
     %resultSet.delete();
   }	  
   function JorvikMod2::SmallLogWallWithWindowlvl1() {
-    dbi.Select(JorvikMod2, "SmallLogWallWithWindowlvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall With Window', 'Object from Jorvik MOD',        32,               18,          30,        2484,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_log_wall_with_window_lvl1.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallLogWallWithWindowlvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall With Window', 'Object from Jorvik MOD',        32,               18,          30,        2484,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_log_wall_with_window_lvl1.png') RETURNING ID");
   }
   function JorvikMod2::SmallLogWallWithWindowlvl1Requirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3485,7 +3486,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallLogWallWithShutterslvl1() {
-    dbi.Select(JorvikMod2, "SmallLogWallWithShutterslvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall With Shutters', 'Object from Jorvik MOD',        32,               18,          30,        2544,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_log_wall_with_shutters_lvl1.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallLogWallWithShutterslvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall With Shutters', 'Object from Jorvik MOD',        32,               18,          30,        2544,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_log_wall_with_shutters_lvl1.png') RETURNING ID");
   }
   function JorvikMod2::SmallLogWallWithShutterslvl1Requirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3501,7 +3502,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallLogWallWithEntrancelvl1() {
-    dbi.Select(JorvikMod2, "SmallLogWallWithEntrancelvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall With Entrance', 'Object from Jorvik MOD',        32,               18,          30,        2545,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_log_wall_with_entrance_lvl1.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallLogWallWithEntrancelvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall With Entrance', 'Object from Jorvik MOD',        32,               18,          30,        2545,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_log_wall_with_entrance_lvl1.png') RETURNING ID");
   }
   function JorvikMod2::SmallLogWallWithEntrancelvl1Requirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3515,7 +3516,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallLogWallWithDoorlvl1() {
-    dbi.Select(JorvikMod2, "SmallLogWallWithDoorlvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall With Door', 'Object from Jorvik MOD',        32,               18,          30,        2546,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_log_wall_with_door_lvl1.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallLogWallWithDoorlvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Log Wall With Door', 'Object from Jorvik MOD',        32,               18,          30,        2546,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_log_wall_with_door_lvl1.png') RETURNING ID");
   }
   function JorvikMod2::SmallLogWallWithDoorlvl1Requirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3531,7 +3532,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallWoodenFloorEntrancelvl1() {
-    dbi.Select(JorvikMod2, "SmallWoodenFloorEntranceRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Floor Entrance', 'Object from Jorvik MOD',        32,               18,          30,        2547,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_floor_entrance_lvl1.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallWoodenFloorEntranceRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Floor Entrance', 'Object from Jorvik MOD',        32,               18,          30,        2547,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_floor_entrance_lvl1.png') RETURNING ID");
   }
   function JorvikMod2::SmallWoodenFloorEntrancelvl1Requirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3544,7 +3545,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallWoodenFloorlvl1() {
-    dbi.Select(JorvikMod2, "SmallWoodenFloorlvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Floor', 'Object from Jorvik MOD',        32,               18,          30,        2548,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_floor_lvl1.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallWoodenFloorlvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Floor', 'Object from Jorvik MOD',        32,               18,          30,        2548,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_floor_lvl1.png') RETURNING ID");
   }
   function JorvikMod2::SmallWoodenFloorlvl1Requirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3557,7 +3558,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallWoodenStairs() {
-    dbi.Select(JorvikMod2, "SmallWoodenStairsRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Stairs', 'Object from Jorvik MOD',        32,               18,          30,        2549,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_stairs.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallWoodenStairsRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Stairs', 'Object from Jorvik MOD',        32,               18,          30,        2549,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_stairs.png') RETURNING ID");
   }
   function JorvikMod2::SmallWoodenStairsRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3572,7 +3573,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallThatchRoofTop() {
-    dbi.Select(JorvikMod2, "SmallThatchRoofTopRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofTop', 'Object from Jorvik MOD',        32,               18,          30,        2550,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_thatch_roof_top.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallThatchRoofTopRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofTop', 'Object from Jorvik MOD',        32,               18,          30,        2550,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_thatch_roof_top.png') RETURNING ID");
   }
   function JorvikMod2::SmallThatchRoofTopRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3587,7 +3588,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallThatchRoofOuterCornerTop() {
-    dbi.Select(JorvikMod2, "SmallThatchRoofOuterCornerTopRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofOuterCornerTop', 'Object from Jorvik MOD',        32,               18,          30,        2551,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_thatch_roof_outer_corner_top.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallThatchRoofOuterCornerTopRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofOuterCornerTop', 'Object from Jorvik MOD',        32,               18,          30,        2551,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_thatch_roof_outer_corner_top.png') RETURNING ID");
   }
   function JorvikMod2::SmallThatchRoofOuterCornerTopRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3602,7 +3603,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallThatchRoofTopLeftEnd() {
-    dbi.Select(JorvikMod2, "SmallThatchRoofTopLeftEndRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofTopLeftEnd', 'Object from Jorvik MOD',        32,               18,          30,        2493,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_thatch_roof_top_left_end.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallThatchRoofTopLeftEndRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofTopLeftEnd', 'Object from Jorvik MOD',        32,               18,          30,        2493,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_thatch_roof_top_left_end.png') RETURNING ID");
   }
   function JorvikMod2::SmallThatchRoofTopLeftEndRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3617,7 +3618,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallThatchRoofTopRightEnd() {
-    dbi.Select(JorvikMod2, "SmallThatchRoofTopRightEndRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofTopRightEnd', 'Object from Jorvik MOD',        32,               18,          30,        2494,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_thatch_roof_top_right_end.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallThatchRoofTopRightEndRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofTopRightEnd', 'Object from Jorvik MOD',        32,               18,          30,        2494,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_thatch_roof_top_right_end.png') RETURNING ID");
   }
   function JorvikMod2::SmallThatchRoofTopRightEndRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3632,7 +3633,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallThatchRooflvl1() {
-    dbi.Select(JorvikMod2, "SmallThatchRooflvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoof', 'Object from Jorvik MOD',        32,               18,          30,        2495,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_thatch_roof.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallThatchRooflvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoof', 'Object from Jorvik MOD',        32,               18,          30,        2495,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_thatch_roof.png') RETURNING ID");
   }
   function JorvikMod2::SmallThatchRooflvl1Requirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3647,7 +3648,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallThatchRoofOuterCornerlvl1() {
-    dbi.Select(JorvikMod2, "SmallThatchRoofOuterCornerlvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofOuterCorner', 'Object from Jorvik MOD',        32,               18,          30,        2496,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_thatch_roof_outer_corner.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallThatchRoofOuterCornerlvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofOuterCorner', 'Object from Jorvik MOD',        32,               18,          30,        2496,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_thatch_roof_outer_corner.png') RETURNING ID");
   }
   function JorvikMod2::SmallThatchRoofOuterCornerlvl1Requirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3662,7 +3663,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallWoodenRailing() {
-    dbi.Select(JorvikMod2, "SmallWoodenRailingRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Railing', 'Object from Jorvik MOD',        32,               18,          30,        2497,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_railing.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallWoodenRailingRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Railing', 'Object from Jorvik MOD',        32,               18,          30,        2497,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_railing.png') RETURNING ID");
   }
   function JorvikMod2::SmallWoodenRailingRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3675,7 +3676,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallWoodenRailinglvl1() {
-    dbi.Select(JorvikMod2, "SmallWoodenRailinglvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Railing', 'Object from Jorvik MOD',        32,               18,          30,        2498,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_railing_lvl1.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallWoodenRailinglvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Railing', 'Object from Jorvik MOD',        32,               18,          30,        2498,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_railing_lvl1.png') RETURNING ID");
   }
   function JorvikMod2::SmallWoodenRailinglvl1Requirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3688,7 +3689,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallThatchRoofOuterCornerToplvl1() {
-    dbi.Select(JorvikMod2, "SmallThatchRoofOuterCornerToplvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofOuterCornerTop', 'Object from Jorvik MOD',        32,               18,          30,        2499,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_thatch_roof_outer_corner_top.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallThatchRoofOuterCornerToplvl1Requirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoofOuterCornerTop', 'Object from Jorvik MOD',        32,               18,          30,        2499,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_thatch_roof_outer_corner_top.png') RETURNING ID");
   }
   function JorvikMod2::SmallThatchRoofOuterCornerToplvl1Requirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3703,7 +3704,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::WallTorch() {
-    dbi.Select(JorvikMod2, "WallTorchRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wall Torch', 'Object from Jorvik MOD',        0,               62,          0,        2500,               10,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/wall_torch.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "WallTorchRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wall Torch', 'Object from Jorvik MOD',        NULL,               62,          0,        2500,               10,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/wall_torch.png') RETURNING ID");
   }
   function JorvikMod2::WallTorchRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3716,7 +3717,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallCandle() {
-    dbi.Select(JorvikMod2, "SmallCandleRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Candle', 'Object from Jorvik MOD',        0,               62,          0,        2502 ,               10,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_candle.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallCandleRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Candle', 'Object from Jorvik MOD',        NULL,               62,          0,        2502 ,               10,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_candle.png') RETURNING ID");
   }
   function JorvikMod2::SmallCandleRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3729,7 +3730,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::AurochsCowstand() {
-    dbi.Select(JorvikMod2, "AurochsCowstandRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Aurochs Cow (stand)', 'Object from Jorvik MOD',        2517,                14,          90,        2504,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/aurochs_cow.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "AurochsCowstandRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Aurochs Cow (stand)', 'Object from Jorvik MOD',        NULL,                62,          0,        2504,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/aurochs_cow.png') RETURNING ID");
   }
   function JorvikMod2::AurochsCowstandRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3739,7 +3740,6 @@ package JorvikMod2
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1046,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  427,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  386,                  0,       10,         200,       0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  2517,                  0,       10,         1,       0)");
 
 	  
     }
@@ -3747,7 +3747,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::AurochsCoweat() {
-    dbi.Select(JorvikMod2, "AurochsCoweatRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Aurochs Cow (eat)', 'Object from Jorvik MOD',        2517,                14,          90,        2505,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/aurochs_cow.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "AurochsCoweatRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Aurochs Cow (eat)', 'Object from Jorvik MOD',        NULL,                62,          0,        2505,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/aurochs_cow.png') RETURNING ID");
   }
   function JorvikMod2::AurochsCoweatRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3757,7 +3757,6 @@ package JorvikMod2
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1046,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  427,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  386,                  0,       10,         200,       0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  2517,                  0,       10,         1,       0)");
 
 	  
     }
@@ -3765,7 +3764,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::Aurochssleep() {
-    dbi.Select(JorvikMod2, "AurochsCowsleepRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Aurochs Cow (sleep)', 'Object from Jorvik MOD',        2517,                14,          90,        2506,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/aurochs_cow.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "AurochsCowsleepRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Aurochs Cow (sleep)', 'Object from Jorvik MOD',        NULL,                62,          0,        2506,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/aurochs_cow.png') RETURNING ID");
   }
   function JorvikMod2::AurochsCowsleepRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3775,7 +3774,6 @@ package JorvikMod2
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1046,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  427,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  386,                  0,       10,         200,       0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  2517,                  0,       10,         1,       0)");
  
 	  
     }
@@ -3783,7 +3781,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::Sowstand() {
-    dbi.Select(JorvikMod2, "SowstandRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Sow (stand)', 'Object from Jorvik MOD',        2517,                14,          90,        2508,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/sow.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SowstandRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Sow (stand)', 'Object from Jorvik MOD',        NULL,                62,          0,        2508,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/sow.png') RETURNING ID");
   }
   function JorvikMod2::SowstandRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3793,7 +3791,6 @@ package JorvikMod2
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1048,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  429,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  386,                  0,       10,         100,       0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  2517,                  0,       10,         1,       0)");
 
 	  
     }
@@ -3801,7 +3798,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::Soweat() {
-    dbi.Select(JorvikMod2, "SoweatRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Sow (eat)', 'Object from Jorvik MOD',        2517,                14,          90,        2509,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/sow.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SoweatRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Sow (eat)', 'Object from Jorvik MOD',        NULL,                62,          0,        2509,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/sow.png') RETURNING ID");
   }
   function JorvikMod2::SoweatRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3811,7 +3808,6 @@ package JorvikMod2
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1048,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  429,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  386,                  0,       10,         100,       0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  2517,                  0,       10,         1,       0)");
  
 	  
     }
@@ -3819,7 +3815,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::Sowsleep() {
-    dbi.Select(JorvikMod2, "SowsleepRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Sow (sleep)', 'Object from Jorvik MOD',        2517,                14,          90,        2510,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/sow.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SowsleepRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Sow (sleep)', 'Object from Jorvik MOD',        NULL,                62,          0,        2510,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/sow.png') RETURNING ID");
   }
   function JorvikMod2::SowsleepRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3829,7 +3825,6 @@ package JorvikMod2
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1048,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  429,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  386,                  0,       10,         100,       0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  2517,                  0,       10,         1,       0)");
  
 	  
     }
@@ -3837,7 +3832,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::Horsestand() {
-    dbi.Select(JorvikMod2, "HorsestandRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Horse (stand)', 'Object from Jorvik MOD',        2517,                14,          90,        2510,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/horse.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "HorsestandRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Horse (stand)', 'Object from Jorvik MOD',        NULL,                62,          0,        2511,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/horse.png') RETURNING ID");
   }
   function JorvikMod2::HorsestandRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3847,7 +3842,6 @@ package JorvikMod2
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1039,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  427,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  386,                  0,       10,         200,       0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  2517,                  0,       10,         1,       0)");
 
 	  
     }
@@ -3855,7 +3849,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::Horseeat() {
-    dbi.Select(JorvikMod2, "HorseeatRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Horse (eat)', 'Object from Jorvik MOD',        2517,                14,          90,        2512,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/horse.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "HorseeatRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Horse (eat)', 'Object from Jorvik MOD',        NULL,                62,          0,        2512,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/horse.png') RETURNING ID");
   }
   function JorvikMod2::HorseeatRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3865,7 +3859,6 @@ package JorvikMod2
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1039,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  427,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  386,                  0,       10,         200,       0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  2517,                  0,       10,         1,       0)");
 
 	  
     }
@@ -3873,7 +3866,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::Horsesleep() {
-    dbi.Select(JorvikMod2, "HorsesleepRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Horse (sleep)', 'Object from Jorvik MOD',        2517,                14,          90,        2513,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/horse.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "HorsesleepRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Horse (sleep)', 'Object from Jorvik MOD',        NULL,                62,          0,        2513,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/horse.png') RETURNING ID");
   }
   function JorvikMod2::HorsesleepRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3883,7 +3876,6 @@ package JorvikMod2
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1039,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  427,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  386,                  0,       10,         200,       0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  2517,                  0,       10,         1,       0)");
 
 	  
     }
@@ -3891,7 +3883,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::Slaveworking() {
-    dbi.Select(JorvikMod2, "SlaveworkingRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Slave (working)', 'Object from Jorvik MOD',        2517,                14,          90,        2514,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/slave.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SlaveworkingRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Slave (working)', 'Object from Jorvik MOD',        NULL,                62,          0,        2514,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/slave.png') RETURNING ID");
   }
   function JorvikMod2::SlaveworkingRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3901,7 +3893,6 @@ package JorvikMod2
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1409,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1700,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  386,                  0,       10,         100,       0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  2517,                  0,       10,         1,       0)");
 
 	  
     }
@@ -3909,7 +3900,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::WranentheHunterstand() {
-    dbi.Select(JorvikMod2, "WranentheHunterstandRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wranen the Hunter (stand)', 'Object from Jorvik MOD',        2517,                14,          90,        2515,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/wranen_the_hunter.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "WranentheHunterstandRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wranen the Hunter (stand)', 'Object from Jorvik MOD',        NULL,                62,          0,        2515,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/wranen_the_hunter.png') RETURNING ID");
   }
   function JorvikMod2::WranentheHunterstandRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3919,7 +3910,6 @@ package JorvikMod2
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1409,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1700,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  386,                  0,       10,         100,       0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  2517,                  0,       10,         1,       0)");
 
 	  
     }
@@ -3927,7 +3917,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::BookPaper() {
-    dbi.Select(JorvikMod2, "BookPaperRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Book Paper', 'Object from Jorvik MOD',        293,               8,          90,        2516,               10,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Items/paper.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "BookPaperRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Book Paper', 'Object from Jorvik MOD',        293,               8,          90,        2516,               10,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/items/paper.png') RETURNING ID");
   }
   function JorvikMod2::BookPaperRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3939,7 +3929,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::HealthBook() {
-    dbi.Select(JorvikMod2, "HealthBookRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Health Book', 'Object from Jorvik MOD',        293,               8,          90,        2517,               10,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Items/health_book.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "HealthBookRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Health Book', 'Object from Jorvik MOD',        293,               8,          90,        2517,               10,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/items/health_book.png') RETURNING ID");
   }
   function JorvikMod2::HealthBookRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3953,7 +3943,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallThatchRoofInnerCorner() {
-    dbi.Select(JorvikMod2, "SmallThatchRoofInnerCornerRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoof Inner Corner', 'Object from Jorvik MOD',        32,               18,          30,        2518,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_thatch_roof_inner_corner.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallThatchRoofInnerCornerRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'SmallThatchRoof Inner Corner', 'Object from Jorvik MOD',        32,               18,          30,        2518,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_thatch_roof_inner_corner.png') RETURNING ID");
   }
   function JorvikMod2::SmallThatchRoofInnerCornerRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3968,7 +3958,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
 	  function JorvikMod2::WoodCart() {
-    dbi.Select(JorvikMod2, "WoodCartRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wood Cart', 'Object from Jorvik MOD',        36,               8,          90,        3016,               30,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/wood_cart.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "WoodCartRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wood Cart', 'Object from Jorvik MOD',        36,               8,          90,        3016,               30,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/wood_cart.png') RETURNING ID");
   }
   function JorvikMod2::WoodCartRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -3985,7 +3975,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SiegeTower() {
-    dbi.Select(JorvikMod2, "SiegeTowerRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Siege Tower', 'Object from Jorvik MOD',        36,               10,          0,        2520,               30,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/siegetower.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SiegeTowerRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Siege Tower', 'Object from Jorvik MOD',        36,               10,          0,        2520,               30,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/siegetower.png') RETURNING ID");
   }
   function JorvikMod2::SiegeTowerRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4000,7 +3990,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::AurochsBullstand() {
-    dbi.Select(JorvikMod2, "AurochsBullstandRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Aurochs Bull (stand)', 'Object from Jorvik MOD',        2517,                14,          90,        2521,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/aurochs_bull.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "AurochsBullstandRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Aurochs Bull (stand)', 'Object from Jorvik MOD',        NULL,                62,          0,        2521,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/aurochs_bull.png') RETURNING ID");
   }
   function JorvikMod2::AurochsBullstandRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4010,7 +4000,6 @@ package JorvikMod2
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1047,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  427,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  386,                  0,       10,         200,       0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  2517,                  0,       10,         1,       0)");
 
 	  
     }
@@ -4018,7 +4007,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::AurochsBulleat() {
-    dbi.Select(JorvikMod2, "AurochsBulleatRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Aurochs Bull (eat)', 'Object from Jorvik MOD',        2517,                14,          90,        2522,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/aurochs_bull.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "AurochsBulleatRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Aurochs Bull (eat)', 'Object from Jorvik MOD',        NULL,                62,          0,        2522,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/aurochs_bull.png') RETURNING ID");
   }
   function JorvikMod2::AurochsBulleatRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4028,7 +4017,6 @@ package JorvikMod2
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1047,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  427,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  386,                  0,       10,         200,       0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  2517,                  0,       10,         1,       0)");
 
 	  
     }
@@ -4036,7 +4024,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::AurochsBullsleep() {
-    dbi.Select(JorvikMod2, "AurochsBullsleepRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Aurochs Bull (sleep)', 'Object from Jorvik MOD',        2517,                14,          90,        2523,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/aurochs_bull.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "AurochsBullsleepRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Aurochs Bull (sleep)', 'Object from Jorvik MOD',        NULL,                62,          0,        2523,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/aurochs_bull.png') RETURNING ID");
   }
   function JorvikMod2::AurochsBullsleepRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4046,7 +4034,6 @@ package JorvikMod2
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1047,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  427,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  386,                  0,       10,         200,       0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  2517,                  0,       10,         1,       0)");
 
 	  
     }
@@ -4054,7 +4041,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallWoodenPier() {
-    dbi.Select(JorvikMod2, "SmallWoodenPierRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Pier', 'Object from Jorvik MOD',        32,               18,          60,        2524,               10,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_pier.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallWoodenPierRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Pier', 'Object from Jorvik MOD',        32,               18,          60,        2524,               10,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_pier.png') RETURNING ID");
   }
   function JorvikMod2::SmallWoodenPierRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4068,7 +4055,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallWoodenPierT() {
-    dbi.Select(JorvikMod2, "SmallWoodenPierTRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Pier T', 'Object from Jorvik MOD',        32,               18,          60,        2525,               10,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_pier_T.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallWoodenPierTRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Pier T', 'Object from Jorvik MOD',        32,               18,          60,        2525,               10,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_pier_T.png') RETURNING ID");
   }
   function JorvikMod2::SmallWoodenPierTRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4082,7 +4069,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SmallWoodenPierL() {
-    dbi.Select(JorvikMod2, "SmallWoodenPierLRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Pier L', 'Object from Jorvik MOD',        32,               18,          60,        2526,               10,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/small_wooden_pier_L.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SmallWoodenPierLRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Small Wooden Pier L', 'Object from Jorvik MOD',        32,               18,          60,        2526,               10,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/small_wooden_pier_L.png') RETURNING ID");
   }
   function JorvikMod2::SmallWoodenPierLRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4096,7 +4083,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::WattleWicket() {
-    dbi.Select(JorvikMod2, "WattleWicketRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wattle Wicket', 'Object from Jorvik MOD',        32,               18,          0,        2527,               30,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/wattle_wicket.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "WattleWicketRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wattle Wicket', 'Object from Jorvik MOD',        32,               18,          0,        2527,               30,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/wattle_wicket.png') RETURNING ID");
   }
   function JorvikMod2::WattleWicketRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4109,7 +4096,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::IdolCross() {
-    dbi.Select(JorvikMod2, "IdolCrossRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Idol Cross', 'Object from Jorvik MOD',        34,               54,          0,        2528,               25,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/idol_cross.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "IdolCrossRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Idol Cross', 'Object from Jorvik MOD',        34,               54,          0,        2528,               25,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/idol_cross.png') RETURNING ID");
   }
   function JorvikMod2::IdolCrossRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4124,7 +4111,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::WoodenChurch() {
-    dbi.Select(JorvikMod2, "WoodenChurchRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wooden Church', 'Object from Jorvik MOD',        32,               20,          60,        2529,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/wooden_church.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "WoodenChurchRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wooden Church', 'Object from Jorvik MOD',        32,               20,          60,        2529,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/wooden_church.png') RETURNING ID");
   }
   function JorvikMod2::WoodenChurchRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4141,7 +4128,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::SanctumoftheSleeper() {
-    dbi.Select(JorvikMod2, "SanctumoftheSleeperRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Sanctum of the Sleeper', 'Object from Jorvik MOD',        32,               20,          60,        2485,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/church.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SanctumoftheSleeperRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Sanctum of the Sleeper', 'Object from Jorvik MOD',        32,               20,          60,        2485,               35,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/church.png') RETURNING ID");
   }
   function JorvikMod2::SanctumoftheSleeperRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4158,7 +4145,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::NoviceDecoratorsKit() {
-    dbi.Select(JorvikMod2, "NoviceDecoratorsKitRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Novice Decorator/'s Kit', 'Object from Jorvik MOD',        293,               8,          90,        2531,               10,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Items/decoration_kit_small.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "NoviceDecoratorsKitRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Novice Decorator''s Kit', 'Object from Jorvik MOD',        293,               8,          90,        2531,               10,                       1,        1,          0,           'art/2D/Items/decoration_kit_small.png') RETURNING ID");
   }
   function JorvikMod2::NoviceDecoratorsKitRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4174,7 +4161,7 @@ package JorvikMod2
     dbi.remove(%resultSet);
     %resultSet.delete();
   }  function JorvikMod2::ApprenticeDecoratorsKit() {
-    dbi.Select(JorvikMod2, "ApprenticeDecoratorsKitRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Apprentice Decorator/'s Kit', 'Object from Jorvik MOD',        293,               8,          90,        2532,               10,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Items/decoration_kit_medium.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "ApprenticeDecoratorsKitRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Apprentice Decorator''s Kit', 'Object from Jorvik MOD',        293,               8,          90,        2532,               10,                       1,        1,          0,           'art/2D/Items/decoration_kit_medium.png') RETURNING ID");
   }
   function JorvikMod2::ApprenticeDecoratorsKitRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4190,7 +4177,7 @@ package JorvikMod2
     dbi.remove(%resultSet);
     %resultSet.delete();
   }  function JorvikMod2::MasterDecoratorsKit() {
-    dbi.Select(JorvikMod2, "MasterDecoratorsKitRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Master Decorator/'s Kit', 'Object from Jorvik MOD',        293,               8,          90,        2533,               10,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Items/decoration_kit_large.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "MasterDecoratorsKitRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Master Decorator''s Kit', 'Object from Jorvik MOD',        293,               8,          90,        2533,               10,                       1,        1,          0,           'art/2D/Items/decoration_kit_large.png') RETURNING ID");
   }
   function JorvikMod2::MasterDecoratorsKitRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4207,7 +4194,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::Wolfstand() {
-    dbi.Select(JorvikMod2, "WolfstandRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wolf (stand)', 'Object from Jorvik MOD',        2517,                14,          90,        2534,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Recipes/wolf.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "WolfstandRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Wolf (stand)', 'Object from Jorvik MOD',        NULL,                62,          0,        2534,               90,                       1,        0,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/recipes/wolf.png') RETURNING ID");
   }
   function JorvikMod2::WolfstandRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4217,7 +4204,6 @@ package JorvikMod2
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  1404,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  428,                  0,       10,         1,       0)");
       dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  386,                  0,       10,         100,       0)");
-      dbi.Update("INSERT IGNORE INTO `recipe_requirement` VALUES (NULL, " @ %lastInsert @ ",  2517,                  0,       10,         1,       0)");
 
 	  
     }
@@ -4225,7 +4211,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::GoldSheet() {
-    dbi.Select(JorvikMod2, "GoldSheetRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Gold Sheet', 'Object from Jorvik MOD',        453,               4,          0,        2535,               20,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Items/gold_sheet.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "GoldSheetRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Gold Sheet', 'Object from Jorvik MOD',        453,               4,          0,        2535,               20,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/items/gold_sheet.png') RETURNING ID");
   }
   function JorvikMod2::GoldSheetRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4240,7 +4226,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::MetalScissors() {
-    dbi.Select(JorvikMod2, "MetalScissorsRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Metal Scissors', 'Object from Jorvik MOD',        453,               4,          0,        2536,               20,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Items/scissors.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "MetalScissorsRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Metal Scissors', 'Object from Jorvik MOD',        453,               4,          0,        2536,               20,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/items/scissors.png') RETURNING ID");
   }
   function JorvikMod2::MetalScissorsRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4255,7 +4241,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::MetalStamp() {
-    dbi.Select(JorvikMod2, "MetalStampRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Metal Stamp', 'Object from Jorvik MOD',        453,               4,          0,        2537,               20,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Items/metal_stamp.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "MetalStampRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Metal Stamp', 'Object from Jorvik MOD',        453,               4,          0,        2537,               20,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/items/metal_stamp.png') RETURNING ID");
   }
   function JorvikMod2::MetalStampRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4271,7 +4257,7 @@ package JorvikMod2
   }	
 
   function JorvikMod2::GoldBlanks() {
-    dbi.Select(JorvikMod2, "GoldBlanksRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Gold Blanks', 'Object from Jorvik MOD',        453,               4,          90,        2538,               90,                       5,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Items/gold_blanks.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "GoldBlanksRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Gold Blanks', 'Object from Jorvik MOD',        453,               4,          90,        2538,               90,                       5,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/items/gold_blanks.png') RETURNING ID");
   }
   function JorvikMod2::GoldBlanksRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4286,7 +4272,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SilverSheet() {
-    dbi.Select(JorvikMod2, "Silver SheetRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Silver Sheet', 'Object from Jorvik MOD',        453,               4,          0,        2539,               20,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Items/silver_sheet.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "Silver SheetRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Silver Sheet', 'Object from Jorvik MOD',        453,               4,          0,        2539,               20,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/items/silver_sheet.png') RETURNING ID");
   }
   function JorvikMod2::SilverSheetRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4301,7 +4287,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::CopperSheet() {
-    dbi.Select(JorvikMod2, "CopperSheetRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Copper Sheet', 'Object from Jorvik MOD',        453,               4,          0,        2540,               20,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Items/copper_sheet.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "CopperSheetRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Copper Sheet', 'Object from Jorvik MOD',        453,               4,          0,        2540,               20,                       1,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/items/copper_sheet.png') RETURNING ID");
   }
   function JorvikMod2::CopperSheetRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4318,7 +4304,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SilverBlanks() {
-    dbi.Select(JorvikMod2, "SilverBlanksRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Silver Blanks', 'Object from Jorvik MOD',        453,               4,          90,        2541,               90,                       5,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Items/silver_blanks.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SilverBlanksRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Silver Blanks', 'Object from Jorvik MOD',        453,               4,          90,        2541,               90,                       5,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/items/silver_blanks.png') RETURNING ID");
   }
   function JorvikMod2::SilverBlanksRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4334,7 +4320,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::CopperBlanks() {
-    dbi.Select(JorvikMod2, "CopperBlanksRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Copper Blanks', 'Object from Jorvik MOD',        453,               4,          90,        2542,               90,                       5,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Items/copper_blanks.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "CopperBlanksRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Copper Blanks', 'Object from Jorvik MOD',        453,               4,          90,        2542,               90,                       5,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/items/copper_blanks.png') RETURNING ID");
   }
   function JorvikMod2::CopperBlanksRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4350,7 +4336,7 @@ package JorvikMod2
     %resultSet.delete();
   }
   function JorvikMod2::GoldCoins() {
-    dbi.Select(JorvikMod2, "GoldCoinsRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Gold Coins', 'Object from Jorvik MOD',        453,               4,          100,        1061,               100,                       5,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Items/gold_coins.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "GoldCoinsRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Gold Coins', 'Object from Jorvik MOD',        453,               4,          100,        1061,               100,                       5,        1,          0,           'art/2D/Items/gold_coins.png') RETURNING ID");
   }
   function JorvikMod2::GoldCoinsRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4366,7 +4352,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::SilverCoins() {
-    dbi.Select(JorvikMod2, "SilverCoinsRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Silver Coins', 'Object from Jorvik MOD',        453,               4,          100,        1060,               100,                       5,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Items/silver_coins.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "SilverCoinsRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Silver Coins', 'Object from Jorvik MOD',        453,               4,          100,        1060,               100,                       5,        1,          0,           'art/2D/Items/silver_coins.png') RETURNING ID");
   }
   function JorvikMod2::SilverCoinsRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
@@ -4381,7 +4367,7 @@ package JorvikMod2
     %resultSet.delete();
   }	
   function JorvikMod2::CopperCoins() {
-    dbi.Select(JorvikMod2, "CopperCoinsRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Copper Coins', 'Object from Jorvik MOD',        453,               4,          100,        1059,               100,                       5,        1,          0,           'yolauncher/modpack/mods/Jorvik2/art/2D/Items/copper_coins.png') RETURNING ID");
+    dbi.Select(JorvikMod2, "CopperCoinsRequirements","INSERT IGNORE INTO `recipe` VALUES (NULL, 'Copper Coins', 'Object from Jorvik MOD',        453,               4,          100,        1059,               100,                       5,        1,          0,           'art/2D/Items/copper_coins.png') RETURNING ID");
   }
   function JorvikMod2::CopperCoinsRequirements(%this, %resultSet) {
     if(%resultSet.ok() && %resultSet.nextRecord()) {
