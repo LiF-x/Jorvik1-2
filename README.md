@@ -61,9 +61,9 @@ $LiFx::createDataXMLS = true;
 
 The **released** `art.zip` ships this as `false`, so it must be turned on by hand.
 
-### 4. Start the server twice
-The mod registers its objects/recipes on the first start; the database only picks them up on
-the **second** start, which then exports the data XMLs. After the second start you will have:
+### 4. Export the data
+Start the server. With `createDataXMLS` on, it registers the mod and writes the data XMLs to
+`LiFx/dbexport/data/`, then stop it. You will have:
 
 ```
 LiFx/dbexport/data/recipe.xml
@@ -79,7 +79,15 @@ LiFx/dbexport/data/*.xml  ->  data/
 LiFx/dbexport/data/*.xml  ->  yolauncher/modpack/data/
 ```
 
-### 6. Build the Yo Launcher modpack
+### 6. Reload the server
+Start the server again — **after** copying in step 5, not before — so it imports the new
+`data/` and serves the mod data to clients.
+
+> So the order is: **export → copy → reload**. (On a brand-new world a mod object only reaches
+> the DB after its `sql/dump.sql` INSERT is applied on the *following* start, so you may need
+> one extra start before every object appears in the export.)
+
+### 7. Build the Yo Launcher modpack
 Run `createModpack.bat` (needs 7-Zip), which zips everything under `yolauncher\modpack\`
 except `*.dso` into `modpack.zip`. Then upload `modpack.zip` to
 [Yo Launcher](https://www.yolauncher.app/).
