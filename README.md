@@ -20,9 +20,11 @@ matching Yo Launcher client modpack.
 | **LiFx framework** — `art.zip` | the `art.zip` asset of the [ServerAutoloader **v4.3.0** release](https://github.com/LiF-x/ServerAutoloader/releases/tag/v4.3.0) |
 | A zip tool to build the client pack | [7-Zip](https://7zip.dev/en/download/), or `zip`, or Python |
 
-> **Download this mod by cloning *this* repository (`LiF-x/Jorvik1-2`).** There is no release
-> archive. Earlier instructions linked `LiF-x/JorvikMod/releases` — that is the old,
-> incompatible repo; do not use it.
+> **Download the [latest release](https://github.com/LiF-x/Jorvik1-2/releases/latest).** It
+> contains the mod source (server side) and a **pre-built `modpack.zip`** ready to upload
+> straight to Yo Launcher — no build step needed.
+> (Earlier instructions linked `LiF-x/JorvikMod/releases` — that is the old, incompatible
+> repo; do not use it.)
 
 ---
 
@@ -84,6 +86,9 @@ except `*.dso` into `modpack.zip`. Then upload `modpack.zip` to
 
 On Linux without 7-Zip, the equivalent is a recursive zip of the **contents** of
 `yolauncher/modpack/` excluding `*.dso`.
+
+> **Shortcut:** the `modpack.zip` attached to the [latest release](https://github.com/LiF-x/Jorvik1-2/releases/latest)
+> is already built — you can upload it to Yo Launcher directly and skip steps 5–6.
 
 ---
 
