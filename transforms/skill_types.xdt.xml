@@ -1,28 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<table xmlns="https://lifeisfeudal.com/schemas/skill_types.xsd"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="https://lifeisfeudal.com/schemas/skill_types.xsd ../../../../docs/skill_types.xsd"
-       name="skill_type">
-	<types>
-		<type name="Special" msg=""/>
-		<type name="Interface" msg=""/>
-		<type name="Default" msg=""/>
-		<type name="Use Shovel" msg="3031"/>
-		<type name="Gather" msg="3032"/>
-		<type name="Create" msg="3033"/>
-		<type name="Build" msg="3034"/>
-		<type name="Dig a Tunnel" msg="3035"/>
-		<type name="Mine" msg="3036"/>
-		<type name="Look for" msg="3037"/>
-		<type name="Saw out" msg="3038"/>
-		<type name="Forge" msg="3039"/>
-		<type name="Plant" msg="3040"/>
-		<type name="Sow" msg="3041"/>
-		<type name="Treat" msg="3042"/>
-		<type name="Bless with" msg="3043"/>
-		<type name="Claim" msg="3044"/>
-	</types>
-	<row>
+<table xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform" xmlns="https://lifeisfeudal.com/schemas/skill_types.xsd">
+  <row xdt:Locator="Condition(*[local-name()='ID']='1')" xdt:Transform="Replace">
 		<ID>1</ID>
 		<Name>Artisan</Name>
 		<Parent>0</Parent>
@@ -49,9 +27,9 @@
 						<ent_reqs>
 							<ent_req type="substance">1 6 7 8 9 10 11 13 15 17 18 20 22 24 2 19 25 26 27 101 102 103 104 105 106 111 112 113 114 115 116 121 122 123 124 125 126 131 132 133 134 135 136 141 142 143 144 145 146 151 152 153 154 155 156 161 162 163 164 165 166 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -74,14 +52,14 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">334 332 333 241 243 242 665 330 328 331 329 245 244 246 1551 1552 1553 1554 1555 1556 1557 1558</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_dig</sound>
@@ -98,9 +76,9 @@
 							<ent_req type="substance">1 6 7 8 9 10 11 13 15 17 18 20 22 24 2 19 25 26 27 101 102 103 104 105 106 111 112 113 114 115 116 121 122 123 124 125 126 131 132 133 134 135 136 141 142 143 144 145 146 151 152 153 154 155 156 161 162 163 164 165 166 171 172 173 174 175 176 177 178 179 180 181</ent_req>
 							<ent_req type="flatten">0</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -124,9 +102,9 @@
 							<ent_req type="substance">1 6 7 8 9 10 11 13 15 17 18 20 22 24 2 19 25 26 27 101 102 103 104 105 106 111 112 113 114 115 116 121 122 123 124 125 126 131 132 133 134 135 136 141 142 143 144 145 146 151 152 153 154 155 156 161 162 163 164 165 166 171 172 173 174 175 176 177 178 179 180 181</ent_req>
 							<ent_req type="flatten">0</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -150,9 +128,9 @@
 							<ent_req type="substance">1 6 7 8 9 10 11 13 15 17 18 20 22 24 2 19 25 26 27 101 102 103 104 105 106 111 112 113 114 115 116 121 122 123 124 125 126 131 132 133 134 135 136 141 142 143 144 145 146 151 152 153 154 155 156 161 162 163 164 165 166 171 172 173 174 175 176 177 178 179 180 181</ent_req>
 							<ent_req type="flatten">0</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -176,14 +154,14 @@
 						<ent_reqs>
 							<ent_req type="tree_type" age="medium major" stub="0">apple birch elm spruce pine maple mulberry oak aspen hazel juniper spinny</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -200,9 +178,9 @@
 						<ent_reqs>
 							<ent_req type="tree_type" stub="0">apple spruce pine mulberry aspen juniper spinny</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -226,9 +204,9 @@
 						<ent_reqs>
 							<ent_req type="tree_type" stub="1">apple birch elm spruce pine maple mulberry oak aspen hazel juniper spinny</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -251,9 +229,9 @@
 						<ent_reqs>
 							<ent_req type="tree_type" stub="0">birch elm maple oak hazel</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -277,15 +255,15 @@
 							<ent_req type="object_type_id">111 114 141 682</ent_req>
 							<ent_req type="state">complete working damaged</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 			<ability lvl="0" name="a Camp" type="Create" id="23">
 				<duration const="">1</duration>
@@ -293,18 +271,18 @@
 				<entities>
 					<entity type="cell">
 						<ent_reqs>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="state">incomplete</ent_req>
 							<ent_req type="object_type_id">523 682 1152</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -321,7 +299,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -337,9 +315,9 @@
 						<ent_reqs>
 							<ent_req type="substance">1 6 7 8 9 10 11 13 15 17 18 20 22 24 2 19 25 26 27 101 102 103 104 105 106 111 112 113 114 115 116 121 122 123 124 125 126 131 132 133 134 135 136 141 142 143 144 145 146 151 152 153 154 155 156 161 162 163 164 165 166 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -356,7 +334,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='11')" xdt:Transform="Replace">
 		<ID>11</ID>
 		<Name>Nature's Lore</Name>
 		<Parent>0</Parent>
@@ -384,14 +362,14 @@
 						<ent_reqs>
 							<ent_req type="gatherable_type">flint</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -406,14 +384,14 @@
 						<ent_reqs>
 							<ent_req type="gatherable_type">slingammo</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -428,9 +406,9 @@
 						<ent_reqs>
 							<ent_req type="tree_type" age="medium major" stub="0">apple birch elm spruce pine maple mulberry oak aspen hazel juniper spinny</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -438,13 +416,13 @@
 						<ent_reqs>
 							<ent_req type="gatherable_type">branch</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -461,14 +439,14 @@
 						<ent_reqs>
 							<ent_req type="gatherable_type">fiber</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>mowing</animation>
 					<sound>player_mow</sound>
@@ -484,14 +462,14 @@
 						<ent_reqs>
 							<ent_req type="substance">1 7 9 26</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -506,14 +484,14 @@
 						<ent_reqs>
 							<ent_req type="substance">1 2 3 7 8 9 10 19 26</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -528,14 +506,14 @@
 						<ent_reqs>
 							<ent_req type="substance">1 7 9 26</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -551,14 +529,14 @@
 							<ent_req type="state">working</ent_req>
 							<ent_req type="object_type_id">111 114 141 682</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sstam_spent>5</sstam_spent>
@@ -574,14 +552,14 @@
 						<ent_reqs>
 							<ent_req type="gatherable_type">mushroom taproot</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>mowing</animation>
 					<sound>player_mow</sound>
@@ -597,14 +575,14 @@
 						<ent_reqs>
 							<ent_req type="gatherable_type">berries</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>mowing</animation>
 					<sound>player_mow</sound>
@@ -621,9 +599,9 @@
 						<ent_reqs>
 							<ent_req type="gatherable_type">commonherb freshherb prestineherb</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -645,14 +623,14 @@
 						<ent_reqs>
 							<ent_req type="tree_type" age="medium major" stub="0">apple</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -668,14 +646,14 @@
 						<ent_reqs>
 							<ent_req type="tree_type" age="medium major" stub="0">hazel</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -684,7 +662,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="0" name="Craft" id="217">
-				<duration const="10 20"/>
+				<duration const="10 20" />
 				<ability_skill_mult>200</ability_skill_mult>
 				<entities>
 					<entity type="inventory_item">
@@ -693,7 +671,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -703,7 +681,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='51')" xdt:Transform="Replace">
 		<ID>51</ID>
 		<Name>Hunting</Name>
 		<Parent>0</Parent>
@@ -723,12 +701,12 @@
 		<skill_mult>1</skill_mult>
 		<abilities>
 			<ability lvl="0" name="Fish" type="Special" id="89">
-				<duration const="15 10"/>
+				<duration const="15 10" />
 				<chance>0.15</chance>
 				<ability_skill_mult>500</ability_skill_mult>
 				<entities>
 					<entity type="water">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
 				<requirements>
@@ -752,9 +730,9 @@
 							<ent_req type="state">incomplete</ent_req>
 							<ent_req type="object_type_id">911 912 913 914 915 916 917 918 919 920 921 922 923 1142 1143 1144 1145 1146 1147 1148 1149 1150</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -773,10 +751,10 @@
 				<ability_skill_mult>160</ability_skill_mult>
 				<entities>
 					<entity type="cell">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sstam_spent>10</sstam_spent>
@@ -787,10 +765,10 @@
 				<ability_skill_mult>400</ability_skill_mult>
 				<entities>
 					<entity type="cell">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sstam_spent>10</sstam_spent>
@@ -806,7 +784,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -820,14 +798,14 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -843,14 +821,14 @@
 							<ent_req type="state">working</ent_req>
 							<ent_req type="object_type_id">1079</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -866,14 +844,14 @@
 							<ent_req type="state">complete damaged</ent_req>
 							<ent_req type="object_type_id">1079</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -887,14 +865,14 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -910,14 +888,14 @@
 							<ent_req type="state">complete damaged</ent_req>
 							<ent_req type="object_type_id">1080</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -936,7 +914,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -945,7 +923,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='18')" xdt:Transform="Replace">
 		<ID>18</ID>
 		<Name>Construction</Name>
 		<Parent>1</Parent>
@@ -971,14 +949,14 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">1 2 3 6 7 8 9 10 11 12 13 14 15 16 17 19 177 178 180 181</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 							<ent_req type="distance">0</ent_req>
 						</ent_reqs>
 					</entity>
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="state">incomplete</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -999,9 +977,9 @@
 						<ent_reqs>
 							<ent_req type="substance">1 6 7 8 9 10 11 13 15 17 18 20 22 24 2 19 26 27 101 102 103 104 105 106 111 112 113 114 115 116 121 122 123 124 125 126 131 132 133 134 135 136 141 142 143 144 145 146 151 152 153 154 155 156 161 162 163 164 165 166 171 172 173 174 175 176</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -1023,9 +1001,9 @@
 						<ent_reqs>
 							<ent_req type="substance">1 6 7 8 9 10 11 13 15 17 18 20 22 24 2 19 26 27 101 102 103 104 105 106 111 112 113 114 115 116 121 122 123 124 125 126 131 132 133 134 135 136 141 142 143 144 145 146 151 152 153 154 155 156 161 162 163 164 165 166 171 172 173 174 175 176</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -1047,9 +1025,9 @@
 						<ent_reqs>
 							<ent_req type="substance">1 6 7 8 9 10 11 13 15 17 18 20 22 24 2 19 26 27 101 102 103 104 105 106 111 112 113 114 115 116 121 122 123 124 125 126 131 132 133 134 135 136 141 142 143 144 145 146 151 152 153 154 155 156 161 162 163 164 165 166 171 172 173 174 175 176</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -1065,7 +1043,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='19')" xdt:Transform="Replace">
 		<ID>19</ID>
 		<Name>Masonry</Name>
 		<Parent>18</Parent>
@@ -1091,14 +1069,14 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">1 2 3 6 7 8 9 10 11 12 13 14 15 16 17 19 177 178 180 181</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 							<ent_req type="distance">0</ent_req>
 						</ent_reqs>
 					</entity>
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="state">incomplete</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -1113,7 +1091,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='20')" xdt:Transform="Replace">
 		<ID>20</ID>
 		<Name>Architecture</Name>
 		<Parent>19</Parent>
@@ -1139,14 +1117,14 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">1 3 6 7 8 9 10 11 12 13 14 15 16 17 19 177 178 180 181</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 							<ent_req type="distance">0</ent_req>
 						</ent_reqs>
 					</entity>
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="state">incomplete</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -1161,7 +1139,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='7')" xdt:Transform="Replace">
 		<ID>7</ID>
 		<Name>Building Maintain</Name>
 		<Parent>19</Parent>
@@ -1188,9 +1166,9 @@
 						<ent_reqs>
 							<ent_req type="not_object_type_id">60 74 76 622 624 625 682 1125 1397 1153 1154 1155 1448 1449 1457 3016</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -1205,7 +1183,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Make Repair Kit" id="209">
-				<duration const="10 20"/>
+				<duration const="10 20" />
 				<ability_skill_mult>200</ability_skill_mult>
 				<entities>
 					<entity type="inventory_item">
@@ -1215,7 +1193,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -1225,7 +1203,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='16')" xdt:Transform="Replace">
 		<ID>16</ID>
 		<Name>Digging</Name>
 		<Parent>1</Parent>
@@ -1252,13 +1230,13 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">1 7 9 3 12 14 16 5 4 21 23 19</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 					<entity type="tun_side">
 						<ent_reqs>
 							<ent_req type="substance">1 7 9 3 12 14 16 5 4 21 23 19</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -1279,13 +1257,13 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">1 7 9 3 12 14 16 5 4 21 23 19</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 					<entity type="tun_side">
 						<ent_reqs>
 							<ent_req type="substance">1 7 9 3 12 14 16 5 4 21 23 19</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -1306,13 +1284,13 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">1 7 9 3 12 14 16 5 4 21 23 19</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 					<entity type="tun_side">
 						<ent_reqs>
 							<ent_req type="substance">1 7 9 3 12 14 16 5 4 21 23 19</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -1331,7 +1309,7 @@
 				<entities>
 					<entity type="tun_side">
 						<ent_reqs>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -1350,7 +1328,7 @@
 				<entities>
 					<entity type="tun_side">
 						<ent_reqs>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -1365,7 +1343,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='2')" xdt:Transform="Replace">
 		<ID>2</ID>
 		<Name>Mining</Name>
 		<Parent>16</Parent>
@@ -1394,9 +1372,9 @@
 						<ent_reqs>
 							<ent_req type="substance">23</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -1421,9 +1399,9 @@
 						<ent_reqs>
 							<ent_req type="substance">4</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -1439,13 +1417,13 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="0" name="Copper Deposits" type="Look for" id="1">
-				<duration const="8 25"/>
+				<duration const="8 25" />
 				<ability_skill_mult>60</ability_skill_mult>
 				<entities>
-					<entity type="cell"/>
-					<entity type="tun_side"/>
+					<entity type="cell" />
+					<entity type="tun_side" />
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sstam_spent>10</sstam_spent>
@@ -1453,13 +1431,13 @@
 				</results>
 			</ability>
 			<ability lvl="30" name="Iron Deposits" type="Look for" id="3">
-				<duration const="8 25"/>
+				<duration const="8 25" />
 				<ability_skill_mult>60</ability_skill_mult>
 				<entities>
-					<entity type="cell"/>
-					<entity type="tun_side"/>
+					<entity type="cell" />
+					<entity type="tun_side" />
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -1467,7 +1445,7 @@
 				</results>
 			</ability>
 			<ability lvl="30" name="Silver Ore" type="Mine" id="150">
-				<duration const="10 20"/>
+				<duration const="10 20" />
 				<chance>0.005</chance>
 				<ability_skill_mult>400</ability_skill_mult>
 				<entities>
@@ -1475,9 +1453,9 @@
 						<ent_reqs>
 							<ent_req type="substance">21</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -1493,7 +1471,7 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="30" name="Gold" type="Mine" id="151">
-				<duration const="10 20"/>
+				<duration const="10 20" />
 				<chance>0.005</chance>
 				<ability_skill_mult>400</ability_skill_mult>
 				<entities>
@@ -1501,9 +1479,9 @@
 						<ent_reqs>
 							<ent_req type="substance">5</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -1520,56 +1498,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
-		<ID>31</ID>
-		<Name>Precious Prospecting</Name>
-		<Parent>2</Parent>
-		<Group>1</Group>
-		<PrimaryStat>Str</PrimaryStat>
-		<SecondaryStat>Con</SecondaryStat>
-		<Icon>art\2D\skills\Prospecting.png</Icon>
-		<UnknownIcon>art\2D\skills\Prospecting_u.png</UnknownIcon>
-		<Passive>280</Passive>
-		<DescLvl0>281</DescLvl0>
-		<DescLvl30>282</DescLvl30>
-		<DescLvl60>283</DescLvl60>
-		<DescLvl90>284</DescLvl90>
-		<DescLvl100>285</DescLvl100>
-		<MasterMessageID>490</MasterMessageID>
-		<GMMessageID>491</GMMessageID>
-		<skill_mult>1</skill_mult>
-		<abilities>
-			<ability lvl="0" name="Silver Deposits" type="Look for" id="4">
-				<duration const="8 25"/>
-				<ability_skill_mult>400</ability_skill_mult>
-				<entities>
-					<entity type="cell"/>
-					<entity type="tun_side"/>
-				</entities>
-				<requirements/>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-					<sstam_spent>10</sstam_spent>
-				</results>
-			</ability>
-			<ability lvl="60" name="Gold Deposits" type="Look for" id="5">
-				<duration const="8 25"/>
-				<ability_skill_mult>600</ability_skill_mult>
-				<entities>
-					<entity type="cell"/>
-					<entity type="tun_side"/>
-				</entities>
-				<requirements/>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-					<sstam_spent>10</sstam_spent>
-				</results>
-			</ability>
-		</abilities>
-	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='8')" xdt:Transform="Replace">
 		<ID>8</ID>
 		<Name>Carpentry</Name>
 		<Parent>1</Parent>
@@ -1590,7 +1519,7 @@
 		<abilities>
 			<ability lvl="0" name="Craft" id="17">
 				<duration const="">2</duration>
-				<regional type="blueprint" probability="0.15"/>
+				<regional type="blueprint" probability="0.15" />
 				<ability_skill_mult>400</ability_skill_mult>
 				<entities>
 					<entity type="inventory_item">
@@ -1600,7 +1529,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -1616,9 +1545,9 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">626 653</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -1642,9 +1571,9 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">626 653</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -1667,9 +1596,9 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">626 653</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -1690,14 +1619,14 @@
 				<entities>
 					<entity type="cell">
 						<ent_reqs>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="complex_object_type">movable</ent_req>
 							<ent_req type="state">incomplete</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -1711,8 +1640,8 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Use Workbench" type="Special" id="41">
-				<duration const="15 20"/>
-				<regional type="blueprint" probability="0.15"/>
+				<duration const="15 20" />
+				<regional type="blueprint" probability="0.15" />
 				<ability_skill_mult>500</ability_skill_mult>
 				<entities>
 					<entity type="complex_obj">
@@ -1720,14 +1649,14 @@
 							<ent_req type="object_type_id">115 139 518</ent_req>
 							<ent_req type="state">complete</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -1737,7 +1666,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='9')" xdt:Transform="Replace">
 		<ID>9</ID>
 		<Name>Bowcraft</Name>
 		<Parent>8</Parent>
@@ -1769,7 +1698,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -1779,7 +1708,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='10')" xdt:Transform="Replace">
 		<ID>10</ID>
 		<Name>Warfare engineering</Name>
 		<Parent>9</Parent>
@@ -1799,7 +1728,7 @@
 		<skill_mult>1</skill_mult>
 		<abilities>
 			<ability lvl="0" name="Make Naphtha Ammo" id="218">
-				<duration const="10 20"/>
+				<duration const="10 20" />
 				<ability_skill_mult>320</ability_skill_mult>
 				<entities>
 					<entity type="inventory_item">
@@ -1808,7 +1737,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -1817,21 +1746,21 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="0" name="Prepare Warfare Gear" type="Special" id="254">
-				<duration const="15 10"/>
+				<duration const="15 10" />
 				<ability_skill_mult>100</ability_skill_mult>
 				<entities>
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">142 1355</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -1846,9 +1775,9 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -1856,9 +1785,9 @@
 						<ent_reqs>
 							<ent_req type="state">incomplete</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -1874,7 +1803,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='17')" xdt:Transform="Replace">
 		<ID>17</ID>
 		<Name>Materials Preparation</Name>
 		<Parent>1</Parent>
@@ -1904,7 +1833,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -1922,7 +1851,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -1938,14 +1867,14 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">117</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -1953,7 +1882,7 @@
 				</results>
 			</ability>
 			<ability lvl="60" name="Sculpt" type="Special" id="64">
-				<duration const="15 10"/>
+				<duration const="15 10" />
 				<ability_skill_mult>500</ability_skill_mult>
 				<entities>
 					<entity type="complex_obj">
@@ -1961,14 +1890,14 @@
 							<ent_req type="state">complete</ent_req>
 							<ent_req type="object_type_id">123</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -1985,14 +1914,14 @@
 							<ent_req type="state">working</ent_req>
 							<ent_req type="object_type_id">117</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2008,14 +1937,14 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">117</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2031,9 +1960,9 @@
 							<ent_req type="state">working</ent_req>
 							<ent_req type="object_type_id">117</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -2050,7 +1979,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='3')" xdt:Transform="Replace">
 		<ID>3</ID>
 		<Name>Smelting</Name>
 		<Parent>17</Parent>
@@ -2077,14 +2006,14 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">107 136 138 453</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2100,9 +2029,9 @@
 							<ent_req type="state">working</ent_req>
 							<ent_req type="object_type_id">107 136 138 453</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -2125,14 +2054,14 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">107 136 138 453</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2148,9 +2077,9 @@
 							<ent_req type="state">working</ent_req>
 							<ent_req type="object_type_id">107 136 138 453</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -2163,11 +2092,11 @@
 					<sound>player_smelting</sound>
 					<sstam_spent>10</sstam_spent>
 				</results>
-				<autorepeat/>
+				<autorepeat />
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='4')" xdt:Transform="Replace">
 		<ID>4</ID>
 		<Name>Forging</Name>
 		<Parent>3</Parent>
@@ -2196,9 +2125,9 @@
 							<ent_req type="object_type_id">136 453</ent_req>
 							<ent_req type="state">working</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -2223,9 +2152,9 @@
 							<ent_req type="object_type_id">136 453</ent_req>
 							<ent_req type="state">working</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -2242,7 +2171,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='5')" xdt:Transform="Replace">
 		<ID>5</ID>
 		<Name>Armorsmithing</Name>
 		<Parent>3</Parent>
@@ -2271,9 +2200,9 @@
 							<ent_req type="object_type_id">136 453</ent_req>
 							<ent_req type="state">working</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -2290,7 +2219,7 @@
 			</ability>
 			<ability lvl="30" name="Make Armor" type="Special" id="281">
 				<duration const="">2</duration>
-				<regional type="blueprint" probability="0.15"/>
+				<regional type="blueprint" probability="0.15" />
 				<ability_skill_mult>320</ability_skill_mult>
 				<entities>
 					<entity type="complex_obj">
@@ -2298,14 +2227,14 @@
 							<ent_req type="object_type_id">115</ent_req>
 							<ent_req type="state">complete</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2315,48 +2244,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
-		<ID>52</ID>
-		<Name>Jewelry</Name>
-		<Parent>2</Parent>
-		<Group>1</Group>
-		<PrimaryStat>Agi</PrimaryStat>
-		<SecondaryStat>Con</SecondaryStat>
-		<Icon>art\2D\skills\Jewelry.png</Icon>
-		<UnknownIcon>art\2D\skills\Jewelry_u.png</UnknownIcon>
-		<Passive>406</Passive>
-		<DescLvl0>407</DescLvl0>
-		<DescLvl30>408</DescLvl30>
-		<DescLvl60>409</DescLvl60>
-		<DescLvl90>410</DescLvl90>
-		<DescLvl100>411</DescLvl100>
-		<MasterMessageID>592</MasterMessageID>
-		<GMMessageID>593</GMMessageID>
-		<skill_mult>1</skill_mult>
-		<abilities>
-			<ability lvl="0" name="Create Jewelry" id="201">
-				<duration const="20 10"/>
-				<chance>0.001</chance>
-				<ability_skill_mult>500</ability_skill_mult>
-				<entities>
-					<entity type="inventory_item">
-						<ent_reqs>
-							<ent_req type="object_type_id">527</ent_req>
-							<ent_req type="durability">solid corrupted</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements/>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-					<sstam_spent>10</sstam_spent>
-				</results>
-				<autorepeat>possible</autorepeat>
-			</ability>
-		</abilities>
-	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='21')" xdt:Transform="Replace">
 		<ID>21</ID>
 		<Name>Farming</Name>
 		<Parent>11</Parent>
@@ -2375,7 +2263,7 @@
 		<GMMessageID>531</GMMessageID>
 		<skill_mult>1</skill_mult>
 		<abilities>
-			<ability lvl="0" name="Wild Plants" type="Look for"  id="334">
+			<ability lvl="0" name="Wild Plants" type="Look for" id="334">
 				<duration const="">1</duration>
 				<chance>0.3</chance>
 				<ability_skill_mult>0</ability_skill_mult>
@@ -2384,14 +2272,14 @@
 						<ent_reqs>
 							<ent_req type="substance">1 7 9 26</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2406,9 +2294,9 @@
 						<ent_reqs>
 							<ent_req type="gatherable_type">wheat peas cabbage onion carrot flax grape potato</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -2423,13 +2311,13 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="to Plow" type="Use Shovel" id="69">
-				<duration const="15 10"/>
+				<duration const="15 10" />
 				<ability_skill_mult>200</ability_skill_mult>
 				<entities>
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">1 9</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -2443,7 +2331,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Harvest Crops" type="Special" id="73">
-				<duration const="7 20"/>
+				<duration const="7 20" />
 				<ability_skill_mult>200</ability_skill_mult>
 				<regional type="resource" probability="0.05">352 354 355 356 358 359 361 1027</regional>
 				<entities>
@@ -2451,9 +2339,9 @@
 						<ent_reqs>
 							<ent_req type="substance">105 106 115 116 125 126 135 136 145 146 155 156 165 166 175 176</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -2475,14 +2363,14 @@
 						<ent_reqs>
 							<ent_req type="substance">6 10</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2497,14 +2385,14 @@
 						<ent_reqs>
 							<ent_req type="tree_type" age="medium major" stub="0">mulberry</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2520,14 +2408,14 @@
 						<ent_reqs>
 							<ent_req type="substance">6 10</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2542,14 +2430,14 @@
 						<ent_reqs>
 							<ent_req type="substance">6 10</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2564,14 +2452,14 @@
 						<ent_reqs>
 							<ent_req type="substance">6 10</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2586,14 +2474,14 @@
 						<ent_reqs>
 							<ent_req type="substance">6 10</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2608,14 +2496,14 @@
 						<ent_reqs>
 							<ent_req type="substance">6 10</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2630,14 +2518,14 @@
 						<ent_reqs>
 							<ent_req type="substance">6 10</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2652,14 +2540,14 @@
 						<ent_reqs>
 							<ent_req type="substance">6 10</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2674,14 +2562,14 @@
 						<ent_reqs>
 							<ent_req type="substance">6 10</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2696,14 +2584,14 @@
 						<ent_reqs>
 							<ent_req type="substance">6 8 10</ent_req>
 							<ent_req type="claim" usage_type="build">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2712,7 +2600,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='32')" xdt:Transform="Replace">
 		<ID>32</ID>
 		<Name>Advanced Farming</Name>
 		<Parent>21</Parent>
@@ -2741,7 +2629,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2757,14 +2645,14 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">1121</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2772,21 +2660,21 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Grind Grain" type="Special" id="211">
-				<duration const="10 20"/>
+				<duration const="10 20" />
 				<ability_skill_mult>1000</ability_skill_mult>
 				<entities>
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">116</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2802,12 +2690,12 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">137 1093</ent_req>
 							<ent_req type="state">complete</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 			<ability lvl="90" name="Stop Millstones" type="Special" id="263">
 				<duration const="">5</duration>
@@ -2817,12 +2705,12 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">137 1093</ent_req>
 							<ent_req type="state">working</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 			<ability lvl="0" name="Plow with Plough" type="Special" id="71">
 				<duration const="">0</duration>
@@ -2832,11 +2720,11 @@
 						<ent_reqs>
 							<ent_req type="state">complete</ent_req>
 							<ent_req type="object_type_id">53</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>Plowing</animation>
 					<sound>player_plow</sound>
@@ -2851,16 +2739,16 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">1 9</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='13')" xdt:Transform="Replace">
 		<ID>13</ID>
 		<Name>Brewing</Name>
 		<Parent>32</Parent>
@@ -2886,11 +2774,11 @@
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">119</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2905,12 +2793,12 @@
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">1110</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 			<ability lvl="0" name="Warm Up" type="Interface" id="230">
 				<duration const="">2</duration>
@@ -2919,11 +2807,11 @@
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">1110</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2937,11 +2825,11 @@
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">1110</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2957,11 +2845,11 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">1110</ent_req>
 							<ent_req type="state">working</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -2971,7 +2859,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='24')" xdt:Transform="Replace">
 		<ID>24</ID>
 		<Name>Cooking</Name>
 		<Parent>32</Parent>
@@ -2993,16 +2881,16 @@
 			<ability lvl="0" name="Cook" type="Special" id="87">
 				<duration const="">3</duration>
 				<ability_skill_mult>300</ability_skill_mult>
-				<regional type="blueprint" probability="0.05"/>
+				<regional type="blueprint" probability="0.05" />
 				<entities>
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="state">working</ent_req>
 							<ent_req type="object_type_id">111 114 141</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -3038,7 +2926,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='6')" xdt:Transform="Replace">
 		<ID>6</ID>
 		<Name>Forestry</Name>
 		<Parent>21</Parent>
@@ -3065,14 +2953,14 @@
 						<ent_reqs>
 							<ent_req type="tree_type" age="medium major" stub="0">apple birch elm spruce pine maple mulberry oak aspen hazel juniper</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -3087,7 +2975,7 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">7 8</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -3107,7 +2995,7 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">7 8</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -3127,7 +3015,7 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">7 8</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -3147,7 +3035,7 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">7 8</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -3167,7 +3055,7 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">7 8</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -3187,7 +3075,7 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">7 8</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -3207,7 +3095,7 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">7 8</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -3221,13 +3109,13 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="a Hazel Tree" type="Plant" id="278">
-				<duration const="15 10"/>
+				<duration const="15 10" />
 				<ability_skill_mult>500</ability_skill_mult>
 				<entities>
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">7 8</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -3241,13 +3129,13 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="a Juniper Tree" type="Plant" id="279">
-				<duration const="15 10"/>
+				<duration const="15 10" />
 				<ability_skill_mult>500</ability_skill_mult>
 				<entities>
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">7 8</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -3261,13 +3149,13 @@
 				</results>
 			</ability>
 			<ability lvl="60" name="Apple Tree" type="Plant" id="127">
-				<duration const="15 10"/>
+				<duration const="15 10" />
 				<ability_skill_mult>700</ability_skill_mult>
 				<entities>
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">7 8</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -3281,13 +3169,13 @@
 				</results>
 			</ability>
 			<ability lvl="60" name="Mulberry Tree" type="Plant" id="128">
-				<duration const="15 10"/>
+				<duration const="15 10" />
 				<ability_skill_mult>700</ability_skill_mult>
 				<entities>
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">7 8</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -3302,7 +3190,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='12')" xdt:Transform="Replace">
 		<ID>12</ID>
 		<Name>Herbalism</Name>
 		<Parent>11</Parent>
@@ -3329,14 +3217,14 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">1353</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sstam_spent>30</sstam_spent>
@@ -3350,14 +3238,14 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">1353</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sstam_spent>5</sstam_spent>
@@ -3371,14 +3259,14 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">1353</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sstam_spent>30</sstam_spent>
@@ -3394,9 +3282,9 @@
 							<ent_req type="state">complete</ent_req>
 							<ent_req type="object_type_id">140 519</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -3407,7 +3295,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -3416,7 +3304,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='14')" xdt:Transform="Replace">
 		<ID>14</ID>
 		<Name>Healing</Name>
 		<Parent>12</Parent>
@@ -3440,10 +3328,10 @@
 				<ability_skill_mult>300</ability_skill_mult>
 				<entities>
 					<entity type="player">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -3455,10 +3343,10 @@
 				<ability_skill_mult>150</ability_skill_mult>
 				<entities>
 					<entity type="player">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>Bring_round</animation>
 					<sstam_spent>10</sstam_spent>
@@ -3469,10 +3357,10 @@
 				<ability_skill_mult>300</ability_skill_mult>
 				<entities>
 					<entity type="player">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -3484,7 +3372,7 @@
 				<ability_skill_mult>600</ability_skill_mult>
 				<entities>
 					<entity type="player">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
 				<requirements>
@@ -3501,7 +3389,7 @@
 				<ability_skill_mult>800</ability_skill_mult>
 				<entities>
 					<entity type="player">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
 				<requirements>
@@ -3518,80 +3406,17 @@
 				<ability_skill_mult>0</ability_skill_mult>
 				<entities>
 					<entity type="player">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<sstam_spent>30</sstam_spent>
 				</results>
 			</ability>
 		</abilities>
 	</row>
-	<row>
-		<ID>15</ID>
-		<Name>Alchemy</Name>
-		<Parent>14</Parent>
-		<Group>1</Group>
-		<PrimaryStat>Int</PrimaryStat>
-		<SecondaryStat>Agi</SecondaryStat>
-		<Icon>art\2D\skills\Alchemy.png</Icon>
-		<UnknownIcon>art\2D\skills\Alchemy_u.png</UnknownIcon>
-		<Passive>184</Passive>
-		<DescLvl0>185</DescLvl0>
-		<DescLvl30>186</DescLvl30>
-		<DescLvl60>187</DescLvl60>
-		<DescLvl90>188</DescLvl90>
-		<DescLvl100>189</DescLvl100>
-		<MasterMessageID>518</MasterMessageID>
-		<GMMessageID>519</GMMessageID>
-		<skill_mult>1</skill_mult>
-		<abilities>
-			<ability lvl="0" name="Mix a Cocktail" type="Special" id="59">
-				<duration const="">2</duration>
-				<chance>0.1</chance>
-				<ability_skill_mult>400</ability_skill_mult>
-				<entities>
-					<entity type="complex_obj">
-						<ent_reqs>
-							<ent_req type="state">complete</ent_req>
-							<ent_req type="object_type_id">109 140 519</ent_req>
-							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
-							</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements/>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-					<sstam_spent>10</sstam_spent>
-				</results>
-			</ability>
-			<ability lvl="100" name="Transmute Into Gold!" id="60">
-				<duration const="">10</duration>
-				<chance>0.01</chance>
-				<ability_skill_mult>300</ability_skill_mult>
-				<entities>
-					<entity type="inventory_item">
-						<ent_reqs>
-							<ent_req type="object_type_id">414</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements/>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-					<sstam_spent>10</sstam_spent>
-				</results>
-			</ability>
-		</abilities>
-	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='22')" xdt:Transform="Replace">
 		<ID>22</ID>
 		<Name>Animal lore</Name>
 		<Parent>51</Parent>
@@ -3620,7 +3445,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -3636,14 +3461,14 @@
 							<ent_req type="state">complete damaged</ent_req>
 							<ent_req type="object_type_id">133 134 143 144 517</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 			<ability lvl="0" name="Harvest" type="Interface" id="78">
 				<duration const="">2</duration>
@@ -3655,13 +3480,13 @@
 							<ent_req type="state">complete</ent_req>
 							<ent_req type="object_type_id">133 134 143 144 517</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -3676,11 +3501,11 @@
 						<ent_reqs>
 							<ent_req type="state">complete damaged</ent_req>
 							<ent_req type="object_type_id">133 134 143 144 517</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -3689,7 +3514,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='23')" xdt:Transform="Replace">
 		<ID>23</ID>
 		<Name>Procuration</Name>
 		<Parent>22</Parent>
@@ -3709,7 +3534,7 @@
 		<skill_mult>1</skill_mult>
 		<abilities>
 			<ability lvl="0" name="Slaughter" type="Interface" id="80">
-				<duration const="15 10"/>
+				<duration const="15 10" />
 				<chance>0.2</chance>
 				<regional type="resource" probability="0.05">383 384 385 390 427 429 430 431</regional>
 				<ability_skill_mult>660</ability_skill_mult>
@@ -3719,13 +3544,13 @@
 							<ent_req type="state">complete</ent_req>
 							<ent_req type="object_type_id">133 134 143 144 517</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -3741,14 +3566,14 @@
 							<ent_req type="state">working</ent_req>
 							<ent_req type="object_type_id">111 141</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -3757,21 +3582,21 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="30" name="Use Loom" type="Special" id="82">
-				<duration const="15 10"/>
+				<duration const="15 10" />
 				<ability_skill_mult>400</ability_skill_mult>
 				<entities>
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">121</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -3780,21 +3605,21 @@
 				<autorepeat>possible</autorepeat>
 			</ability>
 			<ability lvl="30" name="Use Spinning Wheel" type="Special" id="83">
-				<duration const="15 10"/>
+				<duration const="15 10" />
 				<ability_skill_mult>400</ability_skill_mult>
 				<entities>
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">120</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -3811,14 +3636,14 @@
 							<ent_req type="state">complete</ent_req>
 							<ent_req type="object_type_id">118</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -3834,14 +3659,14 @@
 							<ent_req type="state">complete</ent_req>
 							<ent_req type="object_type_id">472</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -3849,7 +3674,7 @@
 				</results>
 			</ability>
 			<ability lvl="30" name="Weave Rope" id="86">
-				<duration const="15 10"/>
+				<duration const="15 10" />
 				<ability_skill_mult>400</ability_skill_mult>
 				<entities>
 					<entity type="inventory_item">
@@ -3859,7 +3684,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -3876,14 +3701,14 @@
 							<ent_req type="state">working</ent_req>
 							<ent_req type="object_type_id">118</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -3899,14 +3724,14 @@
 							<ent_req type="state">working</ent_req>
 							<ent_req type="object_type_id">472 </ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -3915,736 +3740,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
-		<ID>25</ID>
-		<Name>Tailoring</Name>
-		<Parent>23</Parent>
-		<Group>1</Group>
-		<PrimaryStat>Agi</PrimaryStat>
-		<SecondaryStat>Int</SecondaryStat>
-		<Icon>art\2D\skills\Tailoring.png</Icon>
-		<UnknownIcon>art\2D\skills\Tailoring_u.png</UnknownIcon>
-		<Passive>244</Passive>
-		<DescLvl0>245</DescLvl0>
-		<DescLvl30>246</DescLvl30>
-		<DescLvl60>247</DescLvl60>
-		<DescLvl90>248</DescLvl90>
-		<DescLvl100>249</DescLvl100>
-		<MasterMessageID>538</MasterMessageID>
-		<GMMessageID>539</GMMessageID>
-		<skill_mult>1</skill_mult>
-		<abilities>
-			<ability lvl="0" name="Sew" id="88">
-				<duration const="15 10"/>
-				<chance>0.001</chance>
-				<regional type="blueprint" probability="0.15" />
-				<ability_skill_mult>320</ability_skill_mult>
-				<entities>
-					<entity type="inventory_item">
-						<ent_reqs>
-							<ent_req type="object_type_id">295</ent_req>
-							<ent_req type="durability">solid corrupted</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements/>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-					<sstam_spent>30</sstam_spent>
-				</results>
-				<autorepeat>possible</autorepeat>
-			</ability>
-			<ability lvl="0" name="Sew Armor" type="Special" id="282">
-				<duration const="15 20"/>
-				<chance>0.001</chance>
-				<regional type="blueprint" probability="0.15" />
-				<ability_skill_mult>320</ability_skill_mult>
-				<entities>
-					<entity type="complex_obj">
-						<ent_reqs>
-							<ent_req type="object_type_id">1394</ent_req>
-							<ent_req type="state">complete</ent_req>
-							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
-							</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements/>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-					<sstam_spent>20</sstam_spent>
-				</results>
-				<autorepeat>possible</autorepeat>
-			</ability>
-		</abilities>
-	</row>
-	<row>
-		<ID>26</ID>
-		<Name>Warhorse training</Name>
-		<Parent>23</Parent>
-		<Group>1</Group>
-		<PrimaryStat>Int</PrimaryStat>
-		<SecondaryStat>Will</SecondaryStat>
-		<Icon>art\2D\skills\War_Horse_Training.png</Icon>
-		<UnknownIcon>art\2D\skills\War_Horse_Training_u.png</UnknownIcon>
-		<Passive>250</Passive>
-		<DescLvl0>251</DescLvl0>
-		<DescLvl30>252</DescLvl30>
-		<DescLvl60>253</DescLvl60>
-		<DescLvl90>254</DescLvl90>
-		<DescLvl100>255</DescLvl100>
-		<MasterMessageID>582</MasterMessageID>
-		<GMMessageID>583</GMMessageID>
-		<skill_mult>300</skill_mult>
-		<abilities>
-			<ability lvl="0" name="Train Warhorse" type="Special" id="219">
-				<duration const="">1</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<entities>
-					<entity type="complex_obj">
-						<ent_reqs>
-							<ent_req type="object_type_id">1109</ent_req>
-							<ent_req type="state">complete</ent_req>
-							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
-							</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements>
-					<req type="onhorse">allowed</req>
-					<req type="oncart">denied</req>
-				</requirements>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-					<sstam_spent>60</sstam_spent>
-				</results>
-			</ability>
-			<ability lvl="60" name="Armor Horse" id="227">
-				<duration const="">10</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<entities>
-					<entity type="horse">
-						<ent_reqs>
-							<ent_req type="object_type_id">776</ent_req>
-							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
-							</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements/>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-					<sstam_spent>50</sstam_spent>
-				</results>
-			</ability>
-			<ability lvl="0" name="Finish Training" type="Special" id="233">
-				<duration const="">0</duration>
-				<ability_skill_mult>5</ability_skill_mult>
-				<entities>
-					<entity type="complex_obj">
-						<ent_reqs>
-							<ent_req type="object_type_id">1109</ent_req>
-							<ent_req type="state">complete</ent_req>
-							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
-							</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements>
-					<req type="onhorse">only</req>
-				</requirements>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-					<sstam_spent>50</sstam_spent>
-				</results>
-			</ability>
-		</abilities>
-	</row>
-	<!-- fighting skills-->
-
-	<!--Cavalry line -->
-	<row>
-		<ID>28</ID>
-		<Name>Cavalry</Name>
-		<Parent>0</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Str</PrimaryStat>
-		<SecondaryStat>Int</SecondaryStat>
-		<Icon>art\2D\skills\Mounted_Fighting_Mastery.png</Icon>
-		<UnknownIcon>art\2D\skills\Mounted_Fighting_Mastery_u.png</UnknownIcon>
-		<Passive>262</Passive>
-		<DescLvl0>263</DescLvl0>
-		<DescLvl30>264</DescLvl30>
-		<DescLvl60>265</DescLvl60>
-		<DescLvl90>266</DescLvl90>
-		<DescLvl100>267</DescLvl100>
-		<MasterMessageID>544</MasterMessageID>
-		<GMMessageID>545</GMMessageID>
-		<skill_mult>60</skill_mult>
-		<abilities/>
-	</row>
-	<row>
-		<ID>29</ID>
-		<Name>Knight</Name>
-		<Parent>28</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Con</PrimaryStat>
-		<SecondaryStat>Str</SecondaryStat>
-		<Icon>art\2D\skills\Heavy_Horse_Handling.png</Icon>
-		<UnknownIcon>art\2D\skills\Heavy_Horse_Handling_u.png</UnknownIcon>
-		<Passive>268</Passive>
-		<DescLvl0>269</DescLvl0>
-		<DescLvl30>270</DescLvl30>
-		<DescLvl60>271</DescLvl60>
-		<DescLvl90>272</DescLvl90>
-		<DescLvl100>273</DescLvl100>
-		<MasterMessageID>546</MasterMessageID>
-		<GMMessageID>547</GMMessageID>
-		<skill_mult>50</skill_mult>
-		<abilities>
-			<ability lvl="90" name="Iron Grip" id="247">
-				<duration const="">0</duration>
-				<ability_skill_mult>1</ability_skill_mult>
-				<icon>art\2D\skills\abilities\iron_grip.png</icon>
-				<entities/>
-				<requirements>
-					<req type="warstance">allowed_preserve</req>
-					<req type="onhorse">only</req>
-				</requirements>
-				<results>
-					<sstam_spent>30</sstam_spent>
-					<cooldowns>
-						<cooldown group="247">60</cooldown>
-					</cooldowns>
-				</results>
-			</ability>
-		</abilities>
-	</row>
-	<row>
-		<ID>30</ID>
-		<Name>Lancer</Name>
-		<Parent>29</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Int</PrimaryStat>
-		<SecondaryStat>Agi</SecondaryStat>
-		<Icon>art\2D\skills\Lancing.png</Icon>
-		<UnknownIcon>art\2D\skills\Lancing_u.png</UnknownIcon>
-		<Passive>274</Passive>
-		<DescLvl0>275</DescLvl0>
-		<DescLvl30>276</DescLvl30>
-		<DescLvl60>277</DescLvl60>
-		<DescLvl90>278</DescLvl90>
-		<DescLvl100>279</DescLvl100>
-		<MasterMessageID>548</MasterMessageID>
-		<GMMessageID>549</GMMessageID>
-		<skill_mult>50</skill_mult>
-		<abilities/>
-	</row>
-	<!--Cavalry line end-->
-
-
-
-	<!--Militia line -->
-	<row>
-		<ID>33</ID>
-		<Name>Militia</Name>
-		<Parent>0</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Agi</PrimaryStat>
-		<SecondaryStat>Will</SecondaryStat>
-		<Icon>art\2D\skills\Militia_Service.png</Icon>
-		<UnknownIcon>art\2D\skills\Militia_Service_u.png</UnknownIcon>
-		<Passive>292</Passive>
-		<DescLvl0>293</DescLvl0>
-		<DescLvl30>294</DescLvl30>
-		<DescLvl60>295</DescLvl60>
-		<DescLvl90>296</DescLvl90>
-		<DescLvl100>297</DescLvl100>
-		<MasterMessageID>550</MasterMessageID>
-		<GMMessageID>551</GMMessageID>
-		<skill_mult>70</skill_mult>
-		<abilities>
-			<ability lvl="0" name="Draw from Left Waist Slot" id="129">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<icon>art\2D\skills\abilities\left_waist_slot.png</icon>
-				<entities/>
-				<requirements>
-					<req type="warstance">indifferent</req>
-					<req type="onhorse">allowed</req>
-					<req type="oncart">denied</req>
-				</requirements>
-				<results>
-					<cooldowns>
-						<cooldown group="self">1</cooldown>
-					</cooldowns>
-				</results>
-			</ability>
-			<ability lvl="0" name="Draw from Right Waist Slot" id="130">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<icon>art\2D\skills\abilities\right_waist_slot.png</icon>
-				<entities/>
-				<requirements>
-					<req type="warstance">indifferent</req>
-					<req type="onhorse">allowed</req>
-					<req type="oncart">denied</req>
-				</requirements>
-				<results>
-					<cooldowns>
-						<cooldown group="self">1</cooldown>
-					</cooldowns>
-				</results>
-			</ability>
-			<ability lvl="0" name="Draw from Left Back Slot" id="131">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<icon>art\2D\skills\abilities\left_back_slot.png</icon>
-				<entities/>
-				<requirements>
-					<req type="warstance">indifferent</req>
-					<req type="onhorse">allowed</req>
-					<req type="oncart">denied</req>
-				</requirements>
-				<results>
-					<cooldowns>
-						<cooldown group="self">1</cooldown>
-					</cooldowns>
-				</results>
-			</ability>
-			<ability lvl="0" name="Draw from Right Back Slot" id="132">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<icon>art\2D\skills\abilities\right_back_slot.png</icon>
-				<entities/>
-				<requirements>
-					<req type="warstance">indifferent</req>
-					<req type="onhorse">allowed</req>
-					<req type="oncart">denied</req>
-				</requirements>
-				<results>
-					<cooldowns>
-						<cooldown group="self">1</cooldown>
-					</cooldowns>
-				</results>
-			</ability>
-			<ability lvl="0" name="I yield!" id="166">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<icon>art\2D\skills\abilities\I_Yield.png</icon>
-				<entities/>
-				<requirements>
-					<req type="warstance">allowed</req>
-				</requirements>
-				<results>
-					<animation>iYield_down</animation>
-					<sound sid="44"/>
-					<cooldowns>
-						<cooldown group="Iyield">5</cooldown>
-					</cooldowns>
-				</results>
-			</ability>
-			<ability lvl="0" name="Flee!" id="167">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<icon>art\2D\skills\abilities\flee.png</icon>
-				<entities/>
-				<requirements>
-					<req type="warstance">allowed</req>
-				</requirements>
-				<results>
-					<cooldowns>
-						<cooldown group="flee">300</cooldown>
-					</cooldowns>
-				</results>
-			</ability>
-			<ability lvl="0" name="Coup de Grace" id="250">
-				<duration const="">6</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<icon>art\2D\skills\abilities\coup_de_grace.png</icon>
-				<entities>
-					<entity type="player">
-						<ent_reqs/>
-					</entity>
-				</entities>
-				<requirements>
-					<req type="warstance">allowed</req>
-					<req type="tool_id">556 558 559 560 565 570 571 572 573 557 563 564 562 575 576 577 580 581 567 568 569 582 583 579 585 586 587 588 589 591 592 593 594</req>
-				</requirements>
-				<results>
-					<animation>Finishingmove</animation>
-					<sstam_spent>30</sstam_spent>
-				</results>
-			</ability>
-			<ability lvl="0" name="Trickmove" id="266">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<icon>art\2D\skills\abilities\trickmove.png</icon>
-				<entities/>
-				<requirements>
-					<req type="warstance">only</req>
-				</requirements>
-				<results>
-					<sstam_spent>30</sstam_spent>
-				</results>
-			</ability>
-		</abilities>
-	</row>
-	<row>
-		<ID>34</ID>
-		<Name>Spearman</Name>
-		<Parent>33</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Will</PrimaryStat>
-		<SecondaryStat>Str</SecondaryStat>
-		<Icon>art\2D\skills\Spear_Mastery.png</Icon>
-		<UnknownIcon>art\2D\skills\Spear_Mastery_u.png</UnknownIcon>
-		<Passive>298</Passive>
-		<DescLvl0>299</DescLvl0>
-		<DescLvl30>300</DescLvl30>
-		<DescLvl60>301</DescLvl60>
-		<DescLvl90>302</DescLvl90>
-		<DescLvl100>303</DescLvl100>
-		<MasterMessageID>554</MasterMessageID>
-		<GMMessageID>555</GMMessageID>
-		<skill_mult>60</skill_mult>
-		<abilities/>
-	</row>
-	<row>
-		<ID>35</ID>
-		<Name>Guard</Name>
-		<Parent>34</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Int</PrimaryStat>
-		<SecondaryStat>Str</SecondaryStat>
-		<Icon>art\2D\skills\Poleaxes_Mastery.png</Icon>
-		<UnknownIcon>art\2D\skills\Poleaxes_Mastery_u.png</UnknownIcon>
-		<Passive>304</Passive>
-		<DescLvl0>305</DescLvl0>
-		<DescLvl30>306</DescLvl30>
-		<DescLvl60>307</DescLvl60>
-		<DescLvl90>308</DescLvl90>
-		<DescLvl100>309</DescLvl100>
-		<MasterMessageID>558</MasterMessageID>
-		<GMMessageID>559</GMMessageID>
-		<skill_mult>50</skill_mult>
-		<abilities/>
-	</row>
-	<!--Militia line end-->
-
-	<!--Footman line end-->
-	<row>
-		<ID>36</ID>
-		<Name>Footman</Name>
-		<Parent>0</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Con</PrimaryStat>
-		<SecondaryStat>Agi</SecondaryStat>
-		<Icon>art\2D\skills\Axe_And_Mace_Mastery.png</Icon>
-		<UnknownIcon>art\2D\skills\Axe_And_Mace_Mastery_u.png</UnknownIcon>
-		<Passive>310</Passive>
-		<DescLvl0>311</DescLvl0>
-		<DescLvl30>312</DescLvl30>
-		<DescLvl60>313</DescLvl60>
-		<DescLvl90>314</DescLvl90>
-		<DescLvl100>315</DescLvl100>
-		<MasterMessageID>556</MasterMessageID>
-		<GMMessageID>557</GMMessageID>
-		<skill_mult>60</skill_mult>
-		<abilities>
-			<ability lvl="60" name="Skullsplitter!" id="157">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<combo_chains>
-					<chain>rs-ls-oh</chain>
-					<chain>ls-rs-oh</chain>
-				</combo_chains>
-				<entities/>
-				<requirements>
-					<req type="equip_id" parent="1">190</req>
-					<req type="warstance">allowed</req>
-				</requirements>
-				<results>
-					<combo_effects>
-						<combo_effect type="effect" id="39" magnitude="1" chance="1"/>
-					</combo_effects>
-				</results>
-			</ability>
-			<ability lvl="90" name="Knock-Knock!" id="158">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<combo_chains>
-					<chain>oh-oh-oh</chain>
-				</combo_chains>
-				<entities/>
-				<requirements>
-					<req type="equip_id" parent="1">190</req>
-					<req type="warstance">allowed</req>
-				</requirements>
-				<results>
-					<combo_effects>
-						<combo_effect type="effect" id="39" magnitude="1" chance="1"/>
-					</combo_effects>
-				</results>
-			</ability>
-		</abilities>
-	</row>
-	<row>
-		<ID>38</ID>
-		<Name>Swordsman</Name>
-		<Parent>36</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Will</PrimaryStat>
-		<SecondaryStat>Con</SecondaryStat>
-		<Icon>art\2D\skills\1H_Blade_Mastery.png</Icon>
-		<UnknownIcon>art\2D\skills\1H_Blade_Mastery_u.png</UnknownIcon>
-		<Passive>322</Passive>
-		<DescLvl0>323</DescLvl0>
-		<DescLvl30>324</DescLvl30>
-		<DescLvl60>325</DescLvl60>
-		<DescLvl90>326</DescLvl90>
-		<DescLvl100>327</DescLvl100>
-		<MasterMessageID>560</MasterMessageID>
-		<GMMessageID>561</GMMessageID>
-		<skill_mult>50</skill_mult>
-		<abilities>
-			<ability lvl="90" name="Thousand Cuts!" id="155">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<combo_chains>
-					<chain>rs-ls-rs</chain>
-					<chain>ls-rs-ls</chain>
-				</combo_chains>
-				<entities/>
-				<requirements>
-					<req type="equip_id" parent="1">54 56</req>
-					<req type="warstance">allowed</req>
-				</requirements>
-				<results>
-					<combo_effects>
-						<combo_effect type="effect" id="39" magnitude="1" chance="1"/>
-						<combo_effect type="wound_chance" chance="0.5"/>
-						<combo_effect type="bleeding_chance" chance="1"/>
-					</combo_effects>
-				</results>
-			</ability>
-			<ability lvl="60" name="Flurry of Blows!" id="156">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<combo_chains>
-					<chain>rs-ls-th</chain>
-					<chain>ls-rs-th</chain>
-				</combo_chains>
-				<entities/>
-				<requirements>
-					<req type="equip_id" parent="1">54</req>
-					<req type="warstance">allowed</req>
-				</requirements>
-				<results>
-					<combo_effects>
-						<combo_effect type="effect" id="39" magnitude="1" chance="1"/>
-					</combo_effects>
-				</results>
-			</ability>
-		</abilities>
-	</row>
-	<row>
-		<ID>40</ID>
-		<Name>Huscarl</Name>
-		<Parent>38</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Str</PrimaryStat>
-		<SecondaryStat>Will</SecondaryStat>
-		<Icon>art\2D\skills\Shield_Mastery.png</Icon>
-		<UnknownIcon>art\2D\skills\Shield_Mastery_u.png</UnknownIcon>
-		<Passive>334</Passive>
-		<DescLvl0>335</DescLvl0>
-		<DescLvl30>336</DescLvl30>
-		<DescLvl60>337</DescLvl60>
-		<DescLvl90>338</DescLvl90>
-		<DescLvl100>339</DescLvl100>
-		<MasterMessageID>564</MasterMessageID>
-		<GMMessageID>565</GMMessageID>
-		<skill_mult>45</skill_mult>
-		<abilities>
-			<ability lvl="60" name="Point of Vulnerability!" id="159">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<combo_chains>
-					<chain>oh-rs-ls</chain>
-					<chain>oh-ls-rs</chain>
-				</combo_chains>
-				<entities/>
-				<requirements>
-					<req type="equip_id" parent="1">55</req>
-					<req type="warstance">allowed</req>
-				</requirements>
-				<results>
-					<combo_effects>
-						<combo_effect type="effect" id="39" magnitude="1" chance="1"/>
-					</combo_effects>
-				</results>
-			</ability>
-			<ability lvl="90" name="Another Hole!" id="160">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<combo_chains>
-					<chain>oh-rs-oh</chain>
-					<chain>oh-ls-oh</chain>
-				</combo_chains>
-				<entities/>
-				<requirements>
-					<req type="equip_id" parent="1">55</req>
-					<req type="warstance">allowed</req>
-				</requirements>
-				<results>
-					<combo_effects>
-						<combo_effect type="effect" id="39" magnitude="1" chance="1"/>
-					</combo_effects>
-				</results>
-			</ability>
-		</abilities>
-	</row>
-	<!--Footman line end-->
-
-	<!--Ranged line-->
-	<row>
-		<ID>47</ID>
-		<Name>Slinger</Name>
-		<Parent>0</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Agi</PrimaryStat>
-		<SecondaryStat>Int</SecondaryStat>
-		<Icon>art\2D\skills\Throwing_Weaponry.png</Icon>
-		<UnknownIcon>art\2D\skills\Throwing_Weaponry_u.png</UnknownIcon>
-		<Passive>376</Passive>
-		<DescLvl0>377</DescLvl0>
-		<DescLvl30>378</DescLvl30>
-		<DescLvl60>379</DescLvl60>
-		<DescLvl90>380</DescLvl90>
-		<DescLvl100>381</DescLvl100>
-		<MasterMessageID>588</MasterMessageID>
-		<GMMessageID>589</GMMessageID>
-		<skill_mult>70</skill_mult>
-		<abilities/>
-	</row>
-	<row>
-		<ID>48</ID>
-		<Name>Archer</Name>
-		<Parent>47</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Str</PrimaryStat>
-		<SecondaryStat>Agi</SecondaryStat>
-		<Icon>art\2D\skills\Bows_Mastery.png</Icon>
-		<UnknownIcon>art\2D\skills\Bows_Mastery_u.png</UnknownIcon>
-		<Passive>382</Passive>
-		<DescLvl0>383</DescLvl0>
-		<DescLvl30>384</DescLvl30>
-		<DescLvl60>385</DescLvl60>
-		<DescLvl90>386</DescLvl90>
-		<DescLvl100>387</DescLvl100>
-		<MasterMessageID>584</MasterMessageID>
-		<GMMessageID>585</GMMessageID>
-		<skill_mult>60</skill_mult>
-		<abilities>
-			<ability lvl="0" name="Use Arrow Stand" type="Special" id="271">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<entities>
-					<entity type="complex_obj">
-						<ent_reqs>
-							<ent_req type="object_type_id">156</ent_req>
-							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
-							</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements/>
-				<results/>
-			</ability>
-			<ability lvl="60" name="Stopping Power" id="237">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<icon>art\2D\skills\abilities\stopping_power.png</icon>
-				<entities/>
-				<requirements>
-					<req type="warstance">only</req>
-				</requirements>
-				<results>
-					<cooldowns>
-						<cooldown group="237">15</cooldown>
-					</cooldowns>
-				</results>
-			</ability>
-			<ability lvl="60" name="Arrow Stand" type="Create" id="253">
-				<duration const="15 10"/>
-				<ability_skill_mult>2</ability_skill_mult>
-				<entities>
-					<entity type="cell">
-						<ent_reqs>
-							<ent_req type="substance">1 2 3 6 7 8 9 10 11 12 13 14 15 16 17 19 25 177 178 179</ent_req>
-							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
-							</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements/>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-					<sstam_spent>50</sstam_spent>
-				</results>
-			</ability>
-			<ability lvl="90" name="Arrow to the Knee!" id="239">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<icon>art\2D\skills\abilities\arrow_to_the_knee.png</icon>
-				<entities/>
-				<requirements>
-					<req type="warstance">only</req>
-				</requirements>
-				<results>
-					<cooldowns>
-						<cooldown group="239">15</cooldown>
-					</cooldowns>
-				</results>
-			</ability>
-		</abilities>
-	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='49')" xdt:Transform="Replace">
 		<ID>49</ID>
 		<Name>Ranger</Name>
 		<Parent>48</Parent>
@@ -4671,23 +3767,23 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">159</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sstam_spent>30</sstam_spent>
@@ -4697,7 +3793,7 @@
 				<duration const="">5</duration>
 				<ability_skill_mult>2</ability_skill_mult>
 				<icon>art\2D\skills\abilities\volley.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="warstance">allowed_preserve</req>
 				</requirements>
@@ -4712,7 +3808,7 @@
 				<duration const="">0</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<icon>art\2D\skills\abilities\piercing_bolt.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="warstance">only</req>
 				</requirements>
@@ -4723,21 +3819,21 @@
 				</results>
 			</ability>
 			<ability lvl="60" name="Defensive Fence" type="Create" id="293">
-				<duration const="15 10"/>
+				<duration const="15 10" />
 				<ability_skill_mult>2</ability_skill_mult>
 				<entities>
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">1 2 3 6 7 8 9 10 11 12 13 14 15 16 17 19 25 177 178 179</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -4746,587 +3842,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<!--Ranged line end-->
-
-
-	<!-- secondary fighting skills-->
-	<row>
-		<ID>56</ID>
-		<Name>Unit and formation</Name>
-		<Parent>0</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Int</PrimaryStat>
-		<SecondaryStat>Con</SecondaryStat>
-		<Icon>art\2D\skills\Unit_Formation.png</Icon>
-		<UnknownIcon>art\2D\skills\Unit_Formation_u.png</UnknownIcon>
-		<Passive>430</Passive>
-		<DescLvl0>431</DescLvl0>
-		<DescLvl30>432</DescLvl30>
-		<DescLvl60>433</DescLvl60>
-		<DescLvl90>434</DescLvl90>
-		<DescLvl100>435</DescLvl100>
-		<MasterMessageID>600</MasterMessageID>
-		<GMMessageID>601</GMMessageID>
-		<skill_mult>1</skill_mult>
-		<abilities>
-			<ability lvl="0" name="Invite to Unit" type="Special" id="141">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<entities>
-					<entity type="player">
-						<ent_reqs/>
-					</entity>
-				</entities>
-				<requirements>
-					<req type="warstance">allowed</req>
-					<req type="onhorse">allowed</req>
-				</requirements>
-				<results/>
-			</ability>
-			<ability lvl="0" name="Kick from Unit" type="Special" id="142">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<entities>
-					<entity type="player">
-						<ent_reqs/>
-					</entity>
-				</entities>
-				<requirements>
-					<req type="warstance">allowed</req>
-					<req type="onhorse">allowed</req>
-				</requirements>
-				<results/>
-			</ability>
-			<ability lvl="0" name="Leave Unit" type="Special" id="153">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<entities>
-					<entity type="player">
-						<ent_reqs/>
-					</entity>
-				</entities>
-				<requirements>
-					<req type="warstance">allowed</req>
-					<req type="onhorse">allowed</req>
-				</requirements>
-				<results/>
-			</ability>
-			<ability lvl="0" name="Transfer Leadership" type="Special" id="154">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<entities>
-					<entity type="player">
-						<ent_reqs/>
-					</entity>
-				</entities>
-				<requirements>
-					<req type="warstance">allowed</req>
-					<req type="onhorse">allowed</req>
-				</requirements>
-				<results/>
-			</ability>
-			<ability lvl="0" name="Wall Formation" id="120">
-				<duration const="">0</duration>
-				<ability_skill_mult>200</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<icon>art\2D\skills\abilities\formation_wall.png</icon>
-				<entities/>
-				<requirements>
-					<req type="warstance">only</req>
-					<req type="onhorse">allowed</req>
-					<req type="oncart">denied</req>
-				</requirements>
-				<results>
-					<cooldowns>
-						<cooldown group="formations">30</cooldown>
-						<cooldown group="global">0.5</cooldown>
-					</cooldowns>
-				</results>
-			</ability>
-			<ability lvl="0" name="Wedge Formation" id="121">
-				<duration const="">0</duration>
-				<ability_skill_mult>200</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<icon>art\2D\skills\abilities\formation_wedge.png</icon>
-				<entities/>
-				<requirements>
-					<req type="warstance">only</req>
-					<req type="onhorse">allowed</req>
-					<req type="oncart">denied</req>
-				</requirements>
-				<results>
-					<cooldowns>
-						<cooldown group="formations">30</cooldown>
-						<cooldown group="global">0.5</cooldown>
-					</cooldowns>
-				</results>
-			</ability>
-			<ability lvl="0" name="Circle Formation" id="122">
-				<duration const="">0</duration>
-				<ability_skill_mult>200</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<icon>art\2D\skills\abilities\formation_circle.png</icon>
-				<entities/>
-				<requirements>
-					<req type="warstance">only</req>
-					<req type="onhorse">allowed</req>
-					<req type="oncart">denied</req>
-				</requirements>
-				<results>
-					<cooldowns>
-						<cooldown group="formations">30</cooldown>
-						<cooldown group="global">0.5</cooldown>
-					</cooldowns>
-				</results>
-			</ability>
-			<ability lvl="30" name="Hold Your Ground" id="123">
-				<duration const="">0</duration>
-				<ability_skill_mult>200</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<icon>art\2D\skills\abilities\order_hold.png</icon>
-				<entities/>
-				<requirements>
-					<req type="warstance">only</req>
-					<req type="onhorse">allowed</req>
-					<req type="oncart">denied</req>
-				</requirements>
-				<results>
-					<cooldowns>
-						<cooldown group="orders">10</cooldown>
-						<cooldown group="global">0.5</cooldown>
-					</cooldowns>
-				</results>
-			</ability>
-			<ability lvl="60" name="Charge" id="124">
-				<duration const="">0</duration>
-				<ability_skill_mult>200</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<icon>art\2D\skills\abilities\order_charge.png</icon>
-				<entities/>
-				<requirements>
-					<req type="warstance">only</req>
-					<req type="onhorse">allowed</req>
-					<req type="oncart">denied</req>
-				</requirements>
-				<results>
-					<cooldowns>
-						<cooldown group="orders">10</cooldown>
-						<cooldown group="global">0.5</cooldown>
-					</cooldowns>
-				</results>
-			</ability>
-			<ability lvl="90" name="Move" id="125">
-				<duration const="">0</duration>
-				<ability_skill_mult>200</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<icon>art\2D\skills\abilities\order_move.png</icon>
-				<entities/>
-				<requirements>
-					<req type="warstance">only</req>
-					<req type="onhorse">allowed</req>
-					<req type="oncart">denied</req>
-				</requirements>
-				<results>
-					<cooldowns>
-						<cooldown group="orders">10</cooldown>
-						<cooldown group="global">0.5</cooldown>
-					</cooldowns>
-				</results>
-			</ability>
-		</abilities>
-	</row>
-	<row>
-		<ID>57</ID>
-		<Name>Equipment maintain</Name>
-		<Parent>0</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Con</PrimaryStat>
-		<SecondaryStat>Int</SecondaryStat>
-		<Icon>art\2D\skills\Equipment_Maintain.png</Icon>
-		<UnknownIcon>art\2D\skills\Equipment_Maintain_u.png</UnknownIcon>
-		<Passive>436</Passive>
-		<DescLvl0>437</DescLvl0>
-		<DescLvl30>438</DescLvl30>
-		<DescLvl60>439</DescLvl60>
-		<DescLvl90>440</DescLvl90>
-		<DescLvl100>441</DescLvl100>
-		<MasterMessageID>602</MasterMessageID>
-		<GMMessageID>603</GMMessageID>
-		<skill_mult>1</skill_mult>
-		<abilities>
-			<ability lvl="90" name="Apply a Poison" id="207">
-				<duration const="">3</duration>
-				<ability_skill_mult>400</ability_skill_mult>
-				<entities>
-					<entity type="inventory_item">
-						<ent_reqs>
-							<ent_req type="object_type_id" parent="1">937 944</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements>
-					<req type="tool_id" parent="0">556 558 559 560 565 567 568 569</req>
-					<req type="warstance">allowed_preserve</req>
-					<req type="onhorse">allowed</req>
-					<req type="oncart">denied</req>
-				</requirements>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-					<sstam_spent>10</sstam_spent>
-				</results>
-			</ability>
-			<ability lvl="0" name="Maintain Equipment" id="241">
-				<duration const="10 20"/>
-				<ability_skill_mult>300</ability_skill_mult>
-				<entities>
-					<entity type="inventory_item">
-						<ent_reqs>
-							<ent_req type="object_type_id" parent="1">8 9</ent_req>
-							<ent_req type="durability">corrupted broken</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements>
-					<req type="onhorse">allowed</req>
-					<req type="oncart">denied</req>
-				</requirements>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-					<sstam_spent>50</sstam_spent>
-				</results>
-			</ability>
-			<ability lvl="0" name="Repair Armor" id="333">
-				<duration const="10 20"></duration>
-				<ability_skill_mult>390</ability_skill_mult>
-				<entities>
-					<entity type="complex_obj">
-						<ent_reqs>
-							<ent_req type="object_type_id">115</ent_req>
-							<ent_req type="state">complete</ent_req>
-							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
-							</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements>
-				</requirements>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-					<sstam_spent>50</sstam_spent>
-				</results>
-			</ability>
-		</abilities>
-	</row>
-	<row>
-		<ID>58</ID>
-		<Name>Battle Survival</Name>
-		<Parent>0</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Agi</PrimaryStat>
-		<SecondaryStat>Con</SecondaryStat>
-		<Icon>art\2D\skills\First_Aid.png</Icon>
-		<UnknownIcon>art\2D\skills\First_Aid_u.png</UnknownIcon>
-		<Passive>442</Passive>
-		<DescLvl0>443</DescLvl0>
-		<DescLvl30>444</DescLvl30>
-		<DescLvl60>445</DescLvl60>
-		<DescLvl90>446</DescLvl90>
-		<DescLvl100>447</DescLvl100>
-		<MasterMessageID>604</MasterMessageID>
-		<GMMessageID>605</GMMessageID>
-		<skill_mult>1</skill_mult>
-		<abilities>
-			<ability lvl="0" name="Bleeding" type="Treat" id="235">
-				<duration const="15 10"/>
-				<ability_skill_mult>600</ability_skill_mult>
-				<entities>
-					<entity type="player">
-						<ent_reqs/>
-					</entity>
-					<entity type="inventory_item">
-						<ent_reqs>
-							<ent_req type="object_type_id" parent="0">1124</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements/>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-					<sstam_spent>20</sstam_spent>
-				</results>
-			</ability>
-		</abilities>
-	</row>
-	<row>
-		<ID>59</ID>
-		<Name>Demolition</Name>
-		<Parent>0</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Will</PrimaryStat>
-		<SecondaryStat>Agi</SecondaryStat>
-		<Icon>art\2D\skills\Demolition.png</Icon>
-		<UnknownIcon>art\2D\skills\Demolition_u.png</UnknownIcon>
-		<Passive>448</Passive>
-		<DescLvl0>449</DescLvl0>
-		<DescLvl30>450</DescLvl30>
-		<DescLvl60>451</DescLvl60>
-		<DescLvl90>452</DescLvl90>
-		<DescLvl100>453</DescLvl100>
-		<MasterMessageID>606</MasterMessageID>
-		<GMMessageID>607</GMMessageID>
-		<skill_mult>60</skill_mult>
-		<abilities>
-			<ability lvl="60" name="Manage Trebuchet" type="Special" id="214">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<entities>
-					<entity type="complex_obj">
-						<ent_reqs>
-							<ent_req type="object_type_id">163</ent_req>
-							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-							</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements/>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-				</results>
-			</ability>
-			<ability lvl="60" name="Rotate Trebuchet" type="Special" id="216">
-				<duration const="">1</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<entities>
-					<entity type="complex_obj">
-						<ent_reqs>
-							<ent_req type="object_type_id">163</ent_req>
-							<ent_req type="state">complete</ent_req>
-							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-							</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements/>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-				</results>
-			</ability>
-			<ability lvl="60" name="Fire" type="Special" id="215">
-				<duration const="">0</duration>
-				<ability_skill_mult>15</ability_skill_mult>
-				<entities>
-					<entity type="complex_obj">
-						<ent_reqs>
-							<ent_req type="object_type_id">163</ent_req>
-							<ent_req type="state">complete</ent_req>
-							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-							</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements/>
-				<results/>
-			</ability>
-			<ability lvl="0" name="Light on Wick" type="Special" id="259">
-				<duration const="">3</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<entities>
-					<entity type="complex_obj">
-						<ent_reqs>
-							<ent_req type="object_type_id">1151</ent_req>
-							<ent_req type="state">complete</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements/>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-				</results>
-			</ability>
-			<ability lvl="0" name="Extinguish Wick" type="Special" id="260">
-				<duration const="">3</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<entities>
-					<entity type="complex_obj">
-						<ent_reqs>
-							<ent_req type="object_type_id">1151</ent_req>
-							<ent_req type="state">working</ent_req>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements/>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-				</results>
-			</ability>
-		</abilities>
-	</row>
-	<!-- secondary fighting skills end-->
-
-
-	<!--2H line-->
-	<row>
-		<ID>43</ID>
-		<Name>Assaulter</Name>
-		<Parent>0</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Agi</PrimaryStat>
-		<SecondaryStat>Str</SecondaryStat>
-		<Icon>art\2D\skills\2H_Blade_Mastery.png</Icon>
-		<UnknownIcon>art\2D\skills\2H_Blade_Mastery_u.png</UnknownIcon>
-		<Passive>352</Passive>
-		<DescLvl0>353</DescLvl0>
-		<DescLvl30>354</DescLvl30>
-		<DescLvl60>355</DescLvl60>
-		<DescLvl90>356</DescLvl90>
-		<DescLvl100>357</DescLvl100>
-		<MasterMessageID>570</MasterMessageID>
-		<GMMessageID>571</GMMessageID>
-		<skill_mult>60</skill_mult>
-		<abilities>
-			<ability lvl="60" name="Power Overwhelming!" id="161">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<combo_chains>
-					<chain>rs-ls-th</chain>
-					<chain>ls-rs-th</chain>
-				</combo_chains>
-				<entities/>
-				<requirements>
-					<req type="equip_id" parent="1">57</req>
-					<req type="warstance">allowed</req>
-				</requirements>
-				<results>
-					<combo_effects>
-						<combo_effect type="effect" id="39" magnitude="1" chance="1"/>
-					</combo_effects>
-				</results>
-			</ability>
-			<ability lvl="90" name="Dismember!" id="162">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<combo_chains>
-					<chain>rs-ls-rs</chain>
-					<chain>ls-rs-ls</chain>
-				</combo_chains>
-				<entities/>
-				<requirements>
-					<req type="equip_id" parent="1">56 57</req>
-					<req type="warstance">allowed</req>
-				</requirements>
-				<results>
-					<combo_effects>
-						<combo_effect type="effect" id="39" magnitude="1" chance="1"/>
-					</combo_effects>
-				</results>
-			</ability>
-		</abilities>
-	</row>
-	<row>
-		<ID>44</ID>
-		<Name>Vanguard</Name>
-		<Parent>43</Parent>
-		<Group>2</Group>
-		<PrimaryStat>Str</PrimaryStat>
-		<SecondaryStat>Con</SecondaryStat>
-		<Icon>art\2D\skills\2H_Axes_Mastery.png</Icon>
-		<UnknownIcon>art\2D\skills\2H_Axes_Mastery_u.png</UnknownIcon>
-		<Passive>358</Passive>
-		<DescLvl0>359</DescLvl0>
-		<DescLvl30>360</DescLvl30>
-		<DescLvl60>361</DescLvl60>
-		<DescLvl90>362</DescLvl90>
-		<DescLvl100>363</DescLvl100>
-		<MasterMessageID>574</MasterMessageID>
-		<GMMessageID>575</GMMessageID>
-		<skill_mult>50</skill_mult>
-		<abilities>
-			<ability lvl="60" name="Execution!" id="163">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<combo_chains>
-					<chain>ls-rs-oh</chain>
-					<chain>rs-ls-oh</chain>
-				</combo_chains>
-				<entities/>
-				<requirements>
-					<req type="equip_id" parent="1">58</req>
-					<req type="warstance">allowed</req>
-				</requirements>
-				<results>
-					<combo_effects>
-						<combo_effect type="effect" id="39" magnitude="1" chance="1"/>
-						<combo_effect type="shield_damage" magnitude="2" chance="1"/>
-					</combo_effects>
-				</results>
-			</ability>
-			<ability lvl="60" name="Crunchy!" id="164">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<combo_chains>
-					<chain>ls-rs-rs</chain>
-					<chain>rs-ls-ls</chain>
-				</combo_chains>
-				<entities/>
-				<requirements>
-					<req type="equip_id" parent="1">191</req>
-					<req type="warstance">allowed</req>
-				</requirements>
-				<results>
-					<combo_effects>
-						<combo_effect type="effect" id="39" magnitude="1" chance="1"/>
-						<combo_effect type="fracture_chance" chance="0.75"/>
-					</combo_effects>
-				</results>
-			</ability>
-			<ability lvl="90" name="Kneel Before Me!" id="165">
-				<duration const="">0</duration>
-				<ability_skill_mult>0</ability_skill_mult>
-				<enable_movement>1</enable_movement>
-				<combo_chains>
-					<chain>ls-rs-oh</chain>
-					<chain>rs-ls-oh</chain>
-				</combo_chains>
-				<entities/>
-				<requirements>
-					<req type="equip_id" parent="1">191</req>
-					<req type="warstance">allowed</req>
-				</requirements>
-				<results>
-					<combo_effects>
-						<combo_effect type="effect" id="39" magnitude="1" chance="1"/>
-						<combo_effect type="knockdown_chance" chance="0.75"/>
-					</combo_effects>
-				</results>
-			</ability>
-		</abilities>
-	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='45')" xdt:Transform="Replace">
 		<ID>45</ID>
 		<Name>Berserker</Name>
 		<Parent>44</Parent>
@@ -5349,7 +3865,7 @@
 				<duration const="">0</duration>
 				<ability_skill_mult>3</ability_skill_mult>
 				<icon>art\2D\skills\abilities\taunt_verbal.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="warstance">only</req>
 				</requirements>
@@ -5364,13 +3880,13 @@
 				<duration const="">5</duration>
 				<ability_skill_mult>3</ability_skill_mult>
 				<icon>art\2D\skills\abilities\taunt_gesture.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="warstance">allowed</req>
 				</requirements>
 				<results>
 					<animation>Taunt_gesture</animation>
-					<sound sid="48"/>
+					<sound sid="48" />
 					<sstam_spent>30</sstam_spent>
 					<cooldowns>
 						<cooldown group="taunt_rude">120</cooldown>
@@ -5381,7 +3897,7 @@
 				<duration const="">0</duration>
 				<ability_skill_mult>3</ability_skill_mult>
 				<icon>art\2D\skills\abilities\coward.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="warstance">only</req>
 				</requirements>
@@ -5396,7 +3912,7 @@
 				<duration const="">0</duration>
 				<ability_skill_mult>4</ability_skill_mult>
 				<icon>art\2D\skills\abilities\argh.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="warstance">only</req>
 				</requirements>
@@ -5411,7 +3927,7 @@
 				<duration const="">0</duration>
 				<ability_skill_mult>6</ability_skill_mult>
 				<icon>art\2D\skills\abilities\you_are_mine.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="warstance">only</req>
 				</requirements>
@@ -5424,56 +3940,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<!--2H line end-->
-
-	<!-- fighting skills-->
-
-	<!-- Minor skills-->
-	<row>
-		<ID>53</ID>
-		<Name>Arts</Name>
-		<Parent>0</Parent>
-		<Group>3</Group>
-		<PrimaryStat>Con</PrimaryStat>
-		<SecondaryStat>Will</SecondaryStat>
-		<Icon>art\2D\skills\Arts.png</Icon>
-		<UnknownIcon>art\2D\skills\Arts_u.png</UnknownIcon>
-		<Passive>412</Passive>
-		<DescLvl0>413</DescLvl0>
-		<DescLvl30>414</DescLvl30>
-		<DescLvl60>415</DescLvl60>
-		<DescLvl90>416</DescLvl90>
-		<DescLvl100>417</DescLvl100>
-		<MasterMessageID>671</MasterMessageID>
-		<GMMessageID>672</GMMessageID>
-		<skill_mult>1</skill_mult>
-		<abilities>
-			<ability lvl="0" name="Decorations" type="Create" id="200">
-				<duration const="">5</duration>
-				<ability_skill_mult>960</ability_skill_mult>
-				<entities>
-					<entity type="cell">
-						<ent_reqs>
-							<ent_req type="claim" usage_type="build"/>
-						</ent_reqs>
-					</entity>
-					<entity type="complex_obj">
-						<ent_reqs>
-							<ent_req type="state">incomplete</ent_req>
-							<ent_req type="claim" usage_type="build"/>
-						</ent_reqs>
-					</entity>
-				</entities>
-				<requirements/>
-				<results>
-					<animation>perform</animation>
-					<sound>player_perform</sound>
-					<sstam_spent>50</sstam_spent>
-				</results>
-			</ability>
-		</abilities>
-	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='54')" xdt:Transform="Replace">
 		<ID>54</ID>
 		<Name>Piety</Name>
 		<Parent>0</Parent>
@@ -5496,11 +3963,11 @@
 				<duration const="">15</duration>
 				<ability_skill_mult>480</ability_skill_mult>
 				<icon>art\2D\skills\abilities\Recall.png</icon>
-				<entities/>
-				<requirements/>
+				<entities />
+				<requirements />
 				<results>
 					<animation>pray</animation>
-					<sound sid="91"/>
+					<sound sid="91" />
 					<sstam_spent>100</sstam_spent>
 					<cooldowns>
 						<cooldown group="self">60</cooldown>
@@ -5512,14 +3979,14 @@
 				<duration const="">2</duration>
 				<ability_skill_mult>600</ability_skill_mult>
 				<icon>art\2D\skills\abilities\praise_your_God.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="onhorse">allowed</req>
 					<req type="oncart">denied</req>
 				</requirements>
 				<results>
 					<animation>pray</animation>
-					<sound sid="91"/>
+					<sound sid="91" />
 					<sstam_spent>100</sstam_spent>
 					<cooldowns>
 						<cooldown group="self">60</cooldown>
@@ -5533,7 +4000,7 @@
 				<ability_skill_mult>480</ability_skill_mult>
 				<entities>
 					<entity type="player">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
 				<requirements>
@@ -5542,7 +4009,7 @@
 				</requirements>
 				<results>
 					<animation>pray</animation>
-					<sound sid="91"/>
+					<sound sid="91" />
 					<sstam_spent>30</sstam_spent>
 					<cooldowns>
 						<cooldown group="248">60</cooldown>
@@ -5555,7 +4022,7 @@
 				<ability_skill_mult>480</ability_skill_mult>
 				<entities>
 					<entity type="player">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
 				<requirements>
@@ -5564,7 +4031,7 @@
 				</requirements>
 				<results>
 					<animation>pray</animation>
-					<sound sid="91"/>
+					<sound sid="91" />
 					<sstam_spent>30</sstam_spent>
 					<cooldowns>
 						<cooldown group="248">60</cooldown>
@@ -5579,14 +4046,14 @@
 						<ent_reqs>
 							<ent_req type="object_type_id" parent="1">1722 1715 1716 1717 1718 1719 1720 1734 1735 1892 1893 1894 1895 1896 1897 1898 2005 </ent_req>
 							<ent_req type="state">complete</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>pray</animation>
-					<sound sid="91"/>
+					<sound sid="91" />
 					<sstam_spent>50</sstam_spent>
 					<cooldowns>
 						<cooldown group="147">60</cooldown>
@@ -5601,14 +4068,14 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">1 2 3 6 7 8 9 10 11 12 13 14 15 16 17 19 177 178 180 181</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 							<ent_req type="distance">0</ent_req>
 						</ent_reqs>
 					</entity>
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="state">incomplete</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -5623,7 +4090,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='55')" xdt:Transform="Replace">
 		<ID>55</ID>
 		<Name>Mentoring</Name>
 		<Parent>0</Parent>
@@ -5650,11 +4117,11 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">455 520</ent_req>
 							<ent_req type="state">complete</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -5670,7 +4137,7 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">455 520</ent_req>
 							<ent_req type="state">working</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -5686,7 +4153,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='61')" xdt:Transform="Replace">
 		<ID>61</ID>
 		<Name>Movement</Name>
 		<Parent>0</Parent>
@@ -5715,14 +4182,14 @@
 							<ent_req type="state">complete damaged</ent_req>
 							<ent_req type="not_object_type_id">77 1070 1071 1079 1080 1083 1090 1448 1449 1457 2003</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -5738,9 +4205,9 @@
 							<ent_req type="state">complete damaged</ent_req>
 							<ent_req type="not_object_type_id">523 81 1945 1944</ent_req> <!--Restrict droppable items, make sure only siege ladders can be used-->
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -5748,16 +4215,16 @@
 						<ent_reqs>
 							<ent_req type="complex_object_type">unmovable</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 					<entity type="tun_side">
 						<ent_reqs>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -5765,26 +4232,26 @@
 				<requirements>
 					<req type="world">green</req>
 				</requirements>
-				<results/>
+				<results />
 			</ability>
 			<ability lvl="0" name="Drop Object" id="357">
 				<duration const="">1</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<entities>
 					<entity type="cell">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 					<entity type="complex_obj">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 					<entity type="tun_side">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
 				<requirements>
 					<req type="world">red</req>
 				</requirements>
-				<results/>
+				<results />
 			</ability>
 			<ability lvl="0" name="Move" type="Special" id="183">
 				<duration const="">0</duration>
@@ -5795,14 +4262,14 @@
 							<ent_req type="state">complete damaged</ent_req>
 							<ent_req type="object_type_id">167 168 169</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>Plowing</animation>
 					<sound>player_plow</sound>
@@ -5811,7 +4278,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='62')" xdt:Transform="Replace">
 		<ID>62</ID>
 		<Name>General actions</Name>
 		<Parent>0</Parent>
@@ -5862,7 +4329,7 @@
 				<requirements>
 					<req type="onhorse">allowed</req>
 				</requirements>
-				<results/>
+				<results />
 			</ability>
 			<ability lvl="0" name="Look in Inventory" type="Special" id="108">
 				<duration const="">1</duration>
@@ -5873,9 +4340,9 @@
 							<ent_req type="complex_object_type">movable</ent_req>
 							<ent_req type="state">complete working damaged</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -5883,9 +4350,9 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">1437 1496 3016</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -5893,7 +4360,7 @@
 				<requirements>
 					<req type="onhorse">allowed</req>
 				</requirements>
-				<results/>
+				<results />
 			</ability>
 			<ability lvl="0" name="Look in Inventory" type="Special" id="350">
 				<duration const="">1</duration>
@@ -5904,8 +4371,8 @@
 							<ent_req type="complex_object_type">unmovable</ent_req>
 							<ent_req type="state">damaged</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -5913,7 +4380,7 @@
 				<requirements>
 					<req type="onhorse">allowed</req>
 				</requirements>
-				<results/>
+				<results />
 			</ability>
 			<ability lvl="0" name="Look in Inventory" type="Special" id="351">
 				<duration const="">1</duration>
@@ -5923,32 +4390,32 @@
 						<ent_reqs>
 							<ent_req type="complex_object_type">unmovable</ent_req>
 							<ent_req type="state">complete working</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
 				<requirements>
 					<req type="onhorse">allowed</req>
 				</requirements>
-				<results/>
+				<results />
 			</ability>
 			<ability lvl="0" name="Get Water" type="Special" id="109">
 				<duration const="">1</duration>
 				<ability_skill_mult>100</ability_skill_mult>
 				<entities>
-					<entity type="water"/>
+					<entity type="water" />
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">95 96 1712</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -5962,7 +4429,7 @@
 				<entities>
 					<entity type="inventory_item">
 						<ent_reqs>
-							<ent_req type="claim" usage_type="use" jh_allowed="true"/>
+							<ent_req type="claim" usage_type="use" jh_allowed="true" />
 							<ent_req type="not_object_type_id">1492</ent_req>
 						</ent_reqs>
 					</entity>
@@ -5970,7 +4437,7 @@
 				<requirements>
 					<req type="onhorse">allowed</req>
 				</requirements>
-				<results/>
+				<results />
 			</ability>
 			<ability lvl="0" name="Planning" id="111">
 				<duration const="">-1</duration>
@@ -5978,10 +4445,10 @@
 				<enable_movement>1</enable_movement>
 				<entities>
 					<entity type="cell">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<state>planning</state>
 				</results>
@@ -6017,11 +4484,11 @@
                         <ent_reqs>
                             <ent_req type="state">complete working</ent_req>
                             <ent_req type="object_type_id">127 128 131 132 134 139 140 146 147 148 186 187 188 189 455 516 518 519 520 521 1055 1085 1086 1087 1088 1089 1109 1077 1665 2404 2409 2410</ent_req>
-                            <ent_req type="claim" usage_type="use"/>
+                            <ent_req type="claim" usage_type="use" />
                         </ent_reqs>
                     </entity>
                 </entities>
-                <requirements/>
+                <requirements />
                 <results>
                     <animation>perform</animation>
                     <sound>player_perform</sound>
@@ -6034,7 +4501,7 @@
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">139 140 142 145 146 1055 147 518 519 521 148 1084 1085 1086 1087 1088 1089 1355 2409 2410 2409 2529</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -6074,9 +4541,9 @@
 							<ent_req type="object_type_id">1070 1083 924 925 926 927 928 929 930 931 932 933 934 935 936 1090 1460</ent_req>
 						</ent_reqs>
 					</entity>
-					<entity type="player"/>
+					<entity type="player" />
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -6085,7 +4552,7 @@
 			<ability lvl="0" name="Stuck" id="168">
 				<duration const="">15</duration>
 				<ability_skill_mult>0</ability_skill_mult>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="warstance">denied</req>
 				</requirements>
@@ -6105,9 +4572,9 @@
 						<ent_reqs>
 							<ent_req type="substance">1 6 7 8 9 10 19 178 180 181</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -6115,22 +4582,22 @@
 						<ent_reqs>
 							<ent_req type="state">incomplete</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 			<ability lvl="0" name="Rest" id="182">
 				<duration const="">0</duration>
 				<ability_skill_mult>100</ability_skill_mult>
 				<icon>art\2D\skills\abilities\rest.png</icon>
-				<entities/>
-				<requirements/>
+				<entities />
+				<requirements />
 				<results>
 					<animation>Rest_down</animation>
 					<cooldowns>
@@ -6151,20 +4618,20 @@
 				<requirements>
 					<req type="onhorse">allowed</req>
 				</requirements>
-				<results/>
+				<results />
 			</ability>
 			<ability lvl="0" name="Approve" id="189">
 				<duration const="">3</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<icon>art\2D\skills\abilities\approval.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="onhorse">allowed</req>
 					<req type="oncart">denied</req>
 				</requirements>
 				<results>
 					<animation>approval</animation>
-					<sound sid="92"/>
+					<sound sid="92" />
 					<state>emoting</state>
 					<cooldowns>
 						<cooldown group="emote">3</cooldown>
@@ -6175,14 +4642,14 @@
 				<duration const="">2.5</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<icon>art\2D\skills\abilities\courtesy.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="onhorse">allowed</req>
 					<req type="oncart">denied</req>
 				</requirements>
 				<results>
 					<animation>curtsey</animation>
-					<sound/>
+					<sound />
 					<state>emoting</state>
 					<cooldowns>
 						<cooldown group="emote">2.5</cooldown>
@@ -6193,14 +4660,14 @@
 				<duration const="">4</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<icon>art\2D\skills\abilities\dance.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="onhorse">allowed</req>
 					<req type="oncart">denied</req>
 				</requirements>
 				<results>
 					<animation>dance</animation>
-					<sound/>
+					<sound />
 					<state>emoting</state>
 					<cooldowns>
 						<cooldown group="emote">4</cooldown>
@@ -6211,14 +4678,14 @@
 				<duration const="">5</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<icon>art\2D\skills\abilities\disapproval.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="onhorse">allowed</req>
 					<req type="oncart">denied</req>
 				</requirements>
 				<results>
 					<animation>disapproval</animation>
-					<sound sid="93"/>
+					<sound sid="93" />
 					<state>emoting</state>
 					<cooldowns>
 						<cooldown group="emote">5</cooldown>
@@ -6230,14 +4697,14 @@
 				<!-- trailer version, proper value=5 -->
 				<ability_skill_mult>0</ability_skill_mult>
 				<icon>art\2D\skills\abilities\fright.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="onhorse">allowed</req>
 					<req type="oncart">denied</req>
 				</requirements>
 				<results>
 					<animation>fright</animation>
-					<sound sid="94"/>
+					<sound sid="94" />
 					<state>emoting</state>
 					<cooldowns>
 						<cooldown group="emote">5</cooldown>
@@ -6249,14 +4716,14 @@
 				<!-- trailer version, proper value=5 -->
 				<ability_skill_mult>0</ability_skill_mult>
 				<icon>art\2D\skills\abilities\laughter.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="onhorse">allowed</req>
 					<req type="oncart">denied</req>
 				</requirements>
 				<results>
 					<animation>laughter</animation>
-					<sound sid="97"/>
+					<sound sid="97" />
 					<state>emoting</state>
 					<cooldowns>
 						<cooldown group="emote">5</cooldown>
@@ -6267,14 +4734,14 @@
 				<duration const="">4</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<icon>art\2D\skills\abilities\provocation.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="onhorse">allowed</req>
 					<req type="oncart">denied</req>
 				</requirements>
 				<results>
 					<animation>provocation</animation>
-					<sound/>
+					<sound />
 					<state>emoting</state>
 					<cooldowns>
 						<cooldown group="emote">4</cooldown>
@@ -6285,14 +4752,14 @@
 				<duration const="">2</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<icon>art\2D\skills\abilities\the_return_of_honor.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="onhorse">allowed</req>
 					<req type="oncart">denied</req>
 				</requirements>
 				<results>
 					<animation>the return of honor</animation>
-					<sound sid="96"/>
+					<sound sid="96" />
 					<state>emoting</state>
 					<cooldowns>
 						<cooldown group="emote">2</cooldown>
@@ -6304,14 +4771,14 @@
 				<!-- trailer version, proper value=3.5 -->
 				<ability_skill_mult>0</ability_skill_mult>
 				<icon>art\2D\skills\abilities\welcome.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="onhorse">allowed</req>
 					<req type="oncart">denied</req>
 				</requirements>
 				<results>
 					<animation>Welcome</animation>
-					<sound sid="98"/>
+					<sound sid="98" />
 					<state>emoting</state>
 					<cooldowns>
 						<cooldown group="emote">3.5</cooldown>
@@ -6322,14 +4789,14 @@
 				<duration const="">3</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<icon>art\2D\skills\abilities\pointing_finger.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="onhorse">allowed</req>
 					<req type="oncart">denied</req>
 				</requirements>
 				<results>
 					<animation>indication hand</animation>
-					<sound sid="95"/>
+					<sound sid="95" />
 					<state>emoting</state>
 					<cooldowns>
 						<cooldown group="emote">3</cooldown>
@@ -6382,7 +4849,7 @@
 					<state>craftperformmove</state>
 				</results>
 			</ability>
-			<ability lvl="0" name="Inspect" id="208"  priority="10.0">
+			<ability lvl="0" name="Inspect" id="208" priority="10.0">
 				<duration const="">2</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<entities>
@@ -6392,12 +4859,12 @@
 							<ent_req type="not_object_type_id">623 1070 1071 1083 1090 1448 1449 1457 1540</ent_req>
 						</ent_reqs>
 					</entity>
-					<entity type="attached_obj"/>
-					<entity type="cell"/>
-					<entity type="tun_side"/>
-					<entity type="tree"/>
-					<entity type="player"/>
-					<entity type="horse"/>
+					<entity type="attached_obj" />
+					<entity type="cell" />
+					<entity type="tun_side" />
+					<entity type="tree" />
+					<entity type="player" />
+					<entity type="horse" />
 				</entities>
 				<requirements>
 					<req type="onhorse">allowed</req>
@@ -6415,7 +4882,7 @@
 						<ent_reqs>
 							<ent_req type="state">complete working</ent_req>
 							<ent_req type="object_type_id">175 176 177 1092 503 504 509 1098 514 515</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -6434,9 +4901,9 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">1126 1127 1128 1129 1398 1399 1400 1401</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -6462,7 +4929,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -6476,7 +4943,7 @@
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">165 175 1092 176 177 1336</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -6495,11 +4962,11 @@
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">86 165 166 1336 1629 1630 1631 1632 1633 1657 1658 1659 1660 1661</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sstam_spent>10</sstam_spent>
@@ -6512,12 +4979,12 @@
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">78 79 80 83 522 1665</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 			<ability lvl="0" name="Lay down" id="276">
 				<duration const="">0</duration>
@@ -6526,23 +4993,23 @@
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">84</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 			<ability lvl="0" name="Get up" type="Special" id="277">
 				<duration const="">0</duration>
 				<ability_skill_mult>50</ability_skill_mult>
 				<entities>
-					<entity type="cell"/>
-					<entity type="complex_obj"/>
-					<entity type="tree"/>
-					<entity type="player"/>
+					<entity type="cell" />
+					<entity type="complex_obj" />
+					<entity type="tree" />
+					<entity type="player" />
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<sstam_spent>30</sstam_spent>
 				</results>
@@ -6574,11 +5041,11 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">1335 1410 1411 1412</ent_req>
 							<ent_req type="state">complete</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -6588,8 +5055,8 @@
 			<ability lvl="0" name="Draw Blueprint" id="285">
 				<duration const="">10</duration>
 				<ability_skill_mult>0</ability_skill_mult>
-				<entities/>
-				<requirements/>
+				<entities />
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -6597,7 +5064,7 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Harness" type="Special" id="288">
-				<duration const="20 10"/>
+				<duration const="20 10" />
 				<ability_skill_mult>0</ability_skill_mult>
 				<entities>
 					<entity type="complex_obj">
@@ -6605,14 +5072,14 @@
 							<ent_req type="object_type_id">1461 1497 3016 </ent_req>
 							<ent_req type="state">complete damaged</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -6620,20 +5087,20 @@
 				</results>
 			</ability>
 			<ability lvl="0" name="Unharness" type="Special" id="289">
-				<duration const="20 10"/>
+				<duration const="20 10" />
 				<ability_skill_mult>0</ability_skill_mult>
 				<entities>
 					<entity type="attached_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">1437 1496 3016</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -6643,57 +5110,57 @@
 			<ability lvl="0" name="Follow" id="286">
 				<duration const="">0</duration>
 				<ability_skill_mult>0</ability_skill_mult>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="onhorse">allowed</req>
 				</requirements>
-				<results/>
+				<results />
 			</ability>
 			<ability lvl="0" name="Unfollow" id="295">
 				<duration const="">0</duration>
 				<ability_skill_mult>0</ability_skill_mult>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="onhorse">allowed</req>
 				</requirements>
-				<results/>
+				<results />
 			</ability>
 			<ability lvl="0" name="UnharnessDrop" id="296">
 				<duration const="">0</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<entities>
 					<entity type="cell">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="complex_object_type">unmovable</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 					<entity type="tun_side">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 			<ability lvl="0" name="Interact" id="297">
 				<duration const="">0</duration>
 				<ability_skill_mult>0</ability_skill_mult>
-				<entities/>
+				<entities />
 				<!-- entities are defined in quests_subjects.xml -->
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 			<ability lvl="0" name="Gloomelindhe" id="299">
 				<duration const="">5</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<icon>art\2D\skills\abilities\suicide.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="warstance">allowed</req>
 				</requirements>
@@ -6713,9 +5180,9 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">1437 1496 3016</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -6724,15 +5191,15 @@
 							<ent_req type="object_type_id">1461 1497 3016 </ent_req>
 							<ent_req type="state">complete damaged</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 			<ability lvl="0" name="Pull from Cart" type="Special" id="301">
 				<duration const="">5</duration>
@@ -6742,9 +5209,9 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">1437 1496 3016</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -6753,15 +5220,15 @@
 							<ent_req type="object_type_id">1461 1497 3016 </ent_req>
 							<ent_req type="state">complete damaged</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 			<ability lvl="0" name="Deconstruct" type="Special" id="181">
 				<duration const="">3</duration>
@@ -6772,9 +5239,9 @@
 							<ent_req type="state">incomplete</ent_req>
 							<ent_req type="not_object_type_id">152 153 154 155 911 912 913 914 915 916 917 918 919 920 921 922 923 1142 1143 1144 1145 1146 1147 1148 1149 1150</ent_req>
 							<ent_req type="claim" usage_type="destroy">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -6793,13 +5260,13 @@
 				<entities>
 					<entity type="cell">
 						<ent_reqs>
-							<ent_req type="claim" usage_type="build"></ent_req>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="state">incomplete</ent_req>
-							<ent_req type="claim" usage_type="build"></ent_req>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -6818,7 +5285,7 @@
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">1637</ent_req>
-							<ent_req type="claim" usage_type="destroy"></ent_req>
+							<ent_req type="claim" usage_type="destroy" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -7096,11 +5563,11 @@
 						<ent_reqs>
 							<ent_req type="state">complete</ent_req>
 							<ent_req type="object_type_id">1670 1671 1733 </ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sstam_spent>10</sstam_spent>
@@ -7116,7 +5583,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -7133,7 +5600,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sstam_spent>10</sstam_spent>
@@ -7141,7 +5608,7 @@
 			</ability>
 		</abilities>
 	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='63')" xdt:Transform="Replace">
 		<ID>63</ID>
 		<Name>Horseback riding</Name>
 		<Parent>0</Parent>
@@ -7170,7 +5637,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<sstam_spent>30</sstam_spent>
 				</results>
@@ -7184,14 +5651,14 @@
 							<ent_req type="object_type_id">133 134</ent_req>
 							<ent_req type="state">complete</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<sstam_spent>30</sstam_spent>
 				</results>
@@ -7205,9 +5672,9 @@
 							<ent_req type="object_type_id">133 134</ent_req>
 							<ent_req type="state">complete</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -7227,14 +5694,14 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">773 774 775 776 777 1108 1139 1662 1684</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>perform</animation>
 					<sound>player_perform</sound>
@@ -7249,9 +5716,9 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">773 774 775 776 777 1108 1139 1662 1684 </ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
@@ -7259,59 +5726,39 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">1437 1496 3016</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="realm" jh_allowed_worlds="everywhere"/>
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
-								<land type="town" jh_allowed_worlds="red"/>
+								<land type="realm" jh_allowed_worlds="everywhere" />
+								<land type="outpost" jh_allowed_worlds="everywhere" />
+								<land type="town" jh_allowed_worlds="red" />
 							</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 			<ability lvl="0" name="Get Off" type="Special" id="226">
 				<duration const="">0</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<entities>
-					<entity type="horse"/>
-					<entity type="cell"/>
-					<entity type="tree"/>
+					<entity type="horse" />
+					<entity type="cell" />
+					<entity type="tree" />
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="not_object_type_id">1109</ent_req>
 						</ent_reqs>
 					</entity>
-					<entity type="tun_side"/>
-					<entity type="water"/>
+					<entity type="tun_side" />
+					<entity type="water" />
 				</entities>
 				<requirements>
 					<req type="mounted">only</req>
 				</requirements>
-				<results/>
+				<results />
 			</ability>
 		</abilities>
 	</row>
-	<row>
-		<ID>64</ID>
-		<Name>Swimming</Name>
-		<Parent>0</Parent>
-		<Group>3</Group>
-		<PrimaryStat>Will</PrimaryStat>
-		<SecondaryStat>Agi</SecondaryStat>
-		<Icon>art\2D\skills\Swimming.png</Icon>
-		<UnknownIcon>art\2D\skills\Swimming_u.png</UnknownIcon>
-		<Passive>478</Passive>
-		<DescLvl0>479</DescLvl0>
-		<DescLvl30>480</DescLvl30>
-		<DescLvl60>481</DescLvl60>
-		<DescLvl90>482</DescLvl90>
-		<DescLvl100>483</DescLvl100>
-		<MasterMessageID>616</MasterMessageID>
-		<GMMessageID>617</GMMessageID>
-		<skill_mult>300</skill_mult>
-		<abilities/>
-	</row>
-	<row>
+  <row xdt:Locator="Condition(*[local-name()='ID']='65')" xdt:Transform="Replace">
 		<ID>65</ID>
 		<Name>Authority</Name>
 		<Parent>0</Parent>
@@ -7331,13 +5778,13 @@
 		<skill_mult>1</skill_mult>
 		<abilities>
 			<ability lvl="0" name="the Monument" type="Build" id="185">
-				<duration const="15 10"/>
+				<duration const="15 10" />
 				<ability_skill_mult>10000</ability_skill_mult>
 				<entities>
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">1 2 3 6 7 8 9 10 11 12 13 14 15 16 17 19 177 178 180 181</ent_req>
-							<ent_req type="claim" usage_type="build"></ent_req>
+							<ent_req type="claim" usage_type="build" />
 							<ent_req type="distance">0</ent_req>
 						</ent_reqs>
 					</entity>
@@ -7345,7 +5792,7 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">152 153 154 155</ent_req>
 							<ent_req type="state">incomplete</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -7366,7 +5813,7 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">152 153 154 155</ent_req>
 							<ent_req type="state">incomplete complete damaged</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -7388,7 +5835,7 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">1444</ent_req>
 							<ent_req type="state">incomplete complete damaged</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -7411,7 +5858,7 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">152 153 154 155</ent_req>
 							<ent_req type="state">incomplete complete damaged</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -7429,12 +5876,12 @@
 				<duration const="">0</duration>
 				<ability_skill_mult>0</ability_skill_mult>
 				<icon>art\2D\skills\abilities\trespassers.png</icon>
-				<entities/>
+				<entities />
 				<requirements>
 					<req type="onhorse">allowed</req>
 				</requirements>
 				<results>
-					<sound sid="50"/>
+					<sound sid="50" />
 					<cooldowns>
 						<cooldown group="rest">30</cooldown>
 					</cooldowns>
@@ -7448,11 +5895,11 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">152 153 154 155 1444</ent_req>
 							<ent_req type="state">incomplete complete damaged</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 					<entity type="cell">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
 				<requirements>
@@ -7470,7 +5917,7 @@
 				<ability_skill_mult>0</ability_skill_mult>
 				<entities>
 					<entity type="player">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
 				<requirements>
@@ -7486,12 +5933,12 @@
 				<entities>
 					<entity type="complex_obj">
 						<ent_reqs>
-							<ent_req type="claim" usage_type="destroy"/>
+							<ent_req type="claim" usage_type="destroy" />
 							<ent_req type="not_object_type_id">1456 1457 1460</ent_req>
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>pray</animation>
 					<sound>player_perform</sound>
@@ -7506,11 +5953,11 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">153 154 155</ent_req>
 							<ent_req type="state">incomplete</ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>pray</animation>
 					<sound>player_perform</sound>
@@ -7522,11 +5969,11 @@
 				<ability_skill_mult>0</ability_skill_mult>
 				<entities>
 					<entity type="player">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 			<ability lvl="0" name="Expel the Intruders" type="Special" id="287">
 				<duration const="">0</duration>
@@ -7535,14 +5982,14 @@
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id">139 140 142 145 146 147 148 165 175 176 177 518 519 521 1055 1084 1085 1086 1087 1088 1089 1092 1336 1355 2409 </ent_req>
-							<ent_req type="claim" usage_type="use"/>
+							<ent_req type="claim" usage_type="use" />
 						</ent_reqs>
 					</entity>
 				</entities>
 				<requirements>
 					<req type="onhorse">allowed</req>
 				</requirements>
-				<results/>
+				<results />
 			</ability>
 			<ability lvl="0" name="Private Land" type="Claim" id="290">
 				<duration const="">5</duration>
@@ -7550,7 +5997,7 @@
 				<entities>
 					<entity type="cell">
 						<ent_reqs>
-							<ent_req type="claim" usage_type="claim"/>
+							<ent_req type="claim" usage_type="claim" />
 						</ent_reqs>
 					</entity>
 					<entity type="complex_obj">
@@ -7565,7 +6012,7 @@
 				</requirements>
 				<results>
 					<animation>pray</animation>
-					<sound sid="91"/>
+					<sound sid="91" />
 					<sstam_spent>50</sstam_spent>
 				</results>
 			</ability>
@@ -7576,7 +6023,7 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="distance">0</ent_req>
-							<ent_req type="claim" usage_type="claim"/>
+							<ent_req type="claim" usage_type="claim" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -7585,7 +6032,7 @@
 				</requirements>
 				<results>
 					<animation>pray</animation>
-					<sound sid="91"/>
+					<sound sid="91" />
 					<sstam_spent>10</sstam_spent>
 				</results>
 			</ability>
@@ -7595,7 +6042,7 @@
 				<entities>
 					<entity type="cell">
 						<ent_reqs>
-							<ent_req type="claim" usage_type="claim"/>
+							<ent_req type="claim" usage_type="claim" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -7604,7 +6051,7 @@
 				</requirements>
 				<results>
 					<animation>pray</animation>
-					<sound sid="91"/>
+					<sound sid="91" />
 					<sstam_spent>10</sstam_spent>
 				</results>
 			</ability>
@@ -7613,7 +6060,7 @@
 				<ability_skill_mult>100</ability_skill_mult>
 				<entities>
 					<entity type="cell">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
 				<requirements>
@@ -7630,10 +6077,10 @@
 				<enable_movement>1</enable_movement>
 				<entities>
 					<entity type="cell">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<state>pc_planning</state>
 				</results>
@@ -7652,7 +6099,7 @@
 				<requirements>
 					<req type="onhorse">allowed</req>
 				</requirements>
-				<results/>
+				<results />
 			</ability>
 			<ability lvl="0" name="Rename" id="312">
 				<duration const="">0</duration>
@@ -7661,14 +6108,14 @@
 					<entity type="complex_obj">
 						<ent_reqs>
 							<ent_req type="object_type_id" parent="1">74 96 107 109 111 114 115 116 117 118 122 123 131 132 133 134 135 136 137 138 139 140 141 143 144 145 146 147 148 174 175 176 177 453 455 472 503 504 507 508 509 512 513 514 515 516 517 518 519 520 521 682 1055 1077 1084 1085 1086 1087 1088 1089 1092 1093 1097 1098 1109 1110 1121 1342 1343 1353 1357 1359 1394 1410 1411 1412 1413 1499 53 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 97 98 99 100 101 103 104 105 106 109 115 116 118 119 120 121 123 167 168 169 472 522 523 1152 1323 1333 1334 1394 1405 1406 1407 1445 1446 1461 1497 3016 1657 1658 1659 1660 1661 1701 1723 1724 1725 1726 1727 1728 1729 1730 1731 1732 3016</ent_req>
-							<ent_req type="claim" usage_type="destroy"/>
+							<ent_req type="claim" usage_type="destroy" />
 						</ent_reqs>
 					</entity>
 				</entities>
 				<requirements>
 					<req type="onhorse">allowed</req>
 				</requirements>
-				<results/>
+				<results />
 			</ability>
 			<ability lvl="0" name="Manage Object Rights" id="339">
 				<duration const="">0</duration>
@@ -7680,8 +6127,8 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 			<ability lvl="0" name="Sacrifice Chest" id="305">
 				<duration const="">5</duration>
@@ -7697,7 +6144,7 @@
 				</requirements>
 				<results>
 					<animation>pray</animation>
-					<sound sid="91"></sound>
+					<sound sid="91" />
 					<sstam_spent>10</sstam_spent>
 				</results>
 			</ability>
@@ -7726,7 +6173,7 @@
 				<entities>
 					<entity type="cell">
 						<ent_reqs>
-							<ent_req type="claim" usage_type="claim"/>
+							<ent_req type="claim" usage_type="claim" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -7735,7 +6182,7 @@
 				</requirements>
 				<results>
 					<animation>pray</animation>
-					<sound sid="91"/>
+					<sound sid="91" />
 					<sstam_spent>10</sstam_spent>
 				</results>
 			</ability>
@@ -7746,7 +6193,7 @@
 					<entity type="cell">
 						<ent_reqs>
 							<ent_req type="substance">1 2 3 6 7 8 9 10 11 12 13 14 15 16 17 19 177 178 180 181</ent_req>
-							<ent_req type="claim" usage_type="build"></ent_req>
+							<ent_req type="claim" usage_type="build" />
 							<ent_req type="distance">0</ent_req>
 						</ent_reqs>
 					</entity>
@@ -7754,7 +6201,7 @@
 						<ent_reqs>
 							<ent_req type="object_type_id">1702 1703 1704 1705 1706 1707 1708 1709 1710 1711</ent_req>
 							<ent_req type="state">incomplete</ent_req>
-							<ent_req type="claim" usage_type="build"/>
+							<ent_req type="claim" usage_type="build" />
 						</ent_reqs>
 					</entity>
 				</entities>
@@ -7778,7 +6225,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>pray</animation>
 					<sound>revoke_ritual</sound>
@@ -7795,7 +6242,7 @@
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
+				<requirements />
 				<results>
 					<animation>pray</animation>
 					<sound>revoke_ritual</sound>
@@ -7810,13 +6257,13 @@
 							<ent_req type="object_type_id">1702 1703 1704 1705 1706 1707 1708 1709 1710 1711</ent_req>
 							<ent_req type="state">complete damaged working</ent_req>
 							<ent_req type="claim" usage_type="use">
-								<land type="outpost" jh_allowed_worlds="everywhere"/>
+								<land type="outpost" jh_allowed_worlds="everywhere" />
 							</ent_req>	
 						</ent_reqs>
 					</entity>
 				</entities>
-				<requirements/>
-				<results/>
+				<requirements />
+				<results />
 			</ability>
 			<ability lvl="0" name="Enslave" id="345">
 				<duration const="">20</duration>
@@ -7824,7 +6271,7 @@
 				<icon>art\2D\skills\abilities\coup_de_grace.png</icon>
 				<entities>
 					<entity type="player">
-						<ent_reqs/>
+						<ent_reqs />
 					</entity>
 				</entities>
 				<results>
