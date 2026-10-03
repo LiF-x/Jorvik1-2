@@ -3,7 +3,7 @@
   "id": "Jorvik1-2",
   "name": "JorvikMod 1-2",
   "version": "2.1.0",
-  "description": "JorvikMod 1 \u002B 2.1 modpack (LiFx Framework \u002B yolauncher compatible). Creator: Odin one Eye; modified by Ibun \u0026 Mjoed. Requires the LiFx ServerAutoloader framework v4.3.0.",
+  "description": "JorvikMod 1 + 2.1 modpack (LiFx Framework + yolauncher compatible). Creator: Odin one Eye; modified by Ibun & Mjoed. Requires the LiFx ServerAutoloader framework v4.3.0.",
   "authors": [
     "Odin one Eye",
     "Ibun",
@@ -142,7 +142,8 @@
       },
       {
         "target": "data/skill_types.xml",
-        "transform": "transforms/skill_types.xdt.xml"
+        "transform": "transforms/skill_types.xdt.xml",
+        "mergeOps": "transforms/skill_types.merge.json"
       }
     ]
   }
