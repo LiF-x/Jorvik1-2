@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <table xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform" xmlns="https://lifeisfeudal.com/schemas/skill_types.xsd">
-  <row xdt:Locator="Condition(*[local-name()='ID']='1')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='1')" xdt:Transform="Replace">
 		<ID>1</ID>
 		<Name>Artisan</Name>
 		<Parent>0</Parent>
@@ -334,7 +334,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='11')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='11')" xdt:Transform="Replace">
 		<ID>11</ID>
 		<Name>Nature's Lore</Name>
 		<Parent>0</Parent>
@@ -681,7 +681,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='51')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='51')" xdt:Transform="Replace">
 		<ID>51</ID>
 		<Name>Hunting</Name>
 		<Parent>0</Parent>
@@ -923,7 +923,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='18')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='18')" xdt:Transform="Replace">
 		<ID>18</ID>
 		<Name>Construction</Name>
 		<Parent>1</Parent>
@@ -1043,7 +1043,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='19')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='19')" xdt:Transform="Replace">
 		<ID>19</ID>
 		<Name>Masonry</Name>
 		<Parent>18</Parent>
@@ -1091,7 +1091,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='20')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='20')" xdt:Transform="Replace">
 		<ID>20</ID>
 		<Name>Architecture</Name>
 		<Parent>19</Parent>
@@ -1139,7 +1139,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='7')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='7')" xdt:Transform="Replace">
 		<ID>7</ID>
 		<Name>Building Maintain</Name>
 		<Parent>19</Parent>
@@ -1203,7 +1203,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='16')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='16')" xdt:Transform="Replace">
 		<ID>16</ID>
 		<Name>Digging</Name>
 		<Parent>1</Parent>
@@ -1343,7 +1343,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='2')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='2')" xdt:Transform="Replace">
 		<ID>2</ID>
 		<Name>Mining</Name>
 		<Parent>16</Parent>
@@ -1498,7 +1498,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='8')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='8')" xdt:Transform="Replace">
 		<ID>8</ID>
 		<Name>Carpentry</Name>
 		<Parent>1</Parent>
@@ -1666,7 +1666,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='9')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='9')" xdt:Transform="Replace">
 		<ID>9</ID>
 		<Name>Bowcraft</Name>
 		<Parent>8</Parent>
@@ -1708,7 +1708,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='10')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='10')" xdt:Transform="Replace">
 		<ID>10</ID>
 		<Name>Warfare engineering</Name>
 		<Parent>9</Parent>
@@ -1803,7 +1803,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='17')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='17')" xdt:Transform="Replace">
 		<ID>17</ID>
 		<Name>Materials Preparation</Name>
 		<Parent>1</Parent>
@@ -1979,7 +1979,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='3')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='3')" xdt:Transform="Replace">
 		<ID>3</ID>
 		<Name>Smelting</Name>
 		<Parent>17</Parent>
@@ -2096,7 +2096,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='4')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='4')" xdt:Transform="Replace">
 		<ID>4</ID>
 		<Name>Forging</Name>
 		<Parent>3</Parent>
@@ -2171,7 +2171,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='5')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='5')" xdt:Transform="Replace">
 		<ID>5</ID>
 		<Name>Armorsmithing</Name>
 		<Parent>3</Parent>
@@ -2244,7 +2244,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='21')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='21')" xdt:Transform="Replace">
 		<ID>21</ID>
 		<Name>Farming</Name>
 		<Parent>11</Parent>
@@ -2600,7 +2600,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='32')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='32')" xdt:Transform="Replace">
 		<ID>32</ID>
 		<Name>Advanced Farming</Name>
 		<Parent>21</Parent>
@@ -2748,7 +2748,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='13')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='13')" xdt:Transform="Replace">
 		<ID>13</ID>
 		<Name>Brewing</Name>
 		<Parent>32</Parent>
@@ -2859,7 +2859,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='24')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='24')" xdt:Transform="Replace">
 		<ID>24</ID>
 		<Name>Cooking</Name>
 		<Parent>32</Parent>
@@ -2926,7 +2926,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='6')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='6')" xdt:Transform="Replace">
 		<ID>6</ID>
 		<Name>Forestry</Name>
 		<Parent>21</Parent>
@@ -3190,7 +3190,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='12')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='12')" xdt:Transform="Replace">
 		<ID>12</ID>
 		<Name>Herbalism</Name>
 		<Parent>11</Parent>
@@ -3304,7 +3304,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='14')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='14')" xdt:Transform="Replace">
 		<ID>14</ID>
 		<Name>Healing</Name>
 		<Parent>12</Parent>
@@ -3416,7 +3416,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='22')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='22')" xdt:Transform="Replace">
 		<ID>22</ID>
 		<Name>Animal lore</Name>
 		<Parent>51</Parent>
@@ -3514,7 +3514,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='23')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='23')" xdt:Transform="Replace">
 		<ID>23</ID>
 		<Name>Procuration</Name>
 		<Parent>22</Parent>
@@ -3740,7 +3740,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='49')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='49')" xdt:Transform="Replace">
 		<ID>49</ID>
 		<Name>Ranger</Name>
 		<Parent>48</Parent>
@@ -3842,7 +3842,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='45')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='45')" xdt:Transform="Replace">
 		<ID>45</ID>
 		<Name>Berserker</Name>
 		<Parent>44</Parent>
@@ -3940,7 +3940,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='54')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='54')" xdt:Transform="Replace">
 		<ID>54</ID>
 		<Name>Piety</Name>
 		<Parent>0</Parent>
@@ -4090,7 +4090,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='55')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='55')" xdt:Transform="Replace">
 		<ID>55</ID>
 		<Name>Mentoring</Name>
 		<Parent>0</Parent>
@@ -4153,7 +4153,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='61')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='61')" xdt:Transform="Replace">
 		<ID>61</ID>
 		<Name>Movement</Name>
 		<Parent>0</Parent>
@@ -4278,7 +4278,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='62')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='62')" xdt:Transform="Replace">
 		<ID>62</ID>
 		<Name>General actions</Name>
 		<Parent>0</Parent>
@@ -5608,7 +5608,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='63')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='63')" xdt:Transform="Replace">
 		<ID>63</ID>
 		<Name>Horseback riding</Name>
 		<Parent>0</Parent>
@@ -5758,7 +5758,7 @@
 			</ability>
 		</abilities>
 	</row>
-  <row xdt:Locator="Condition(*[local-name()='ID']='65')" xdt:Transform="Replace">
+  <row xdt:Locator="Condition(normalize-space(*[local-name()='ID'])='65')" xdt:Transform="Replace">
 		<ID>65</ID>
 		<Name>Authority</Name>
 		<Parent>0</Parent>
