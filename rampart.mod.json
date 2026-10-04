@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "Jorvik1-2",
+  "name": "JorvikMod 1-2",
+  "version": "2.1.0",
+  "description": "JorvikMod 1 + 2.1 modpack (LiFx Framework + yolauncher compatible). Creator: Odin one Eye; modified by Ibun & Mjoed. Requires the LiFx ServerAutoloader framework v4.3.0.",
+  "authors": [
+    "Odin one Eye",
+    "Ibun",
+    "Mjoed"
+  ],
+  "source": {
+    "repo": "LiF-x/Jorvik1-2",
+    "commit": "e19d165174e8ba839411b2b40b20ee2530d8a8e0"
+  },
+  "baseline": {
+    "gameBuild": "sha256:d47ef6156423f1226b6d07a1f31f81d3aa94bc460cc1ac76bcf7d7ef9c305d4a",
+    "steamBuildId": "11261643"
+  },
+  "license": "GPL-3.0-only",
+  "distribution": "hostable",
+  "dependencies": [
+    "LiF-x/JorvikMod",
+    "LiF-x/JorvikModv2",
+    "LiF-x/ServerAutoloader"
+  ],
+  "loadOrderHint": 300,
+  "files": {
+    "overlay": [
+      {
+        "src": "art/Textures/Heraldry/",
+        "dest": "art/Textures/Heraldry/"
+      },
+      {
+        "src": "yolauncher/modpack/mods/Jorvik/",
+        "dest": "yolauncher/modpack/mods/Jorvik/"
+      },
+      {
+        "src": "yolauncher/modpack/mods/Jorvik2/",
+        "dest": "yolauncher/modpack/mods/Jorvik2/"
+      },
+      {
+        "src": "yolauncher/modpack/Heraldry/",
+        "dest": "yolauncher/modpack/Heraldry/"
+      }
+    ],
+    "dataPatches": []
+  }
+}
